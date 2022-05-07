@@ -1,0 +1,96 @@
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  h1 {
+    font-size: 8rem;
+  }
+
+  .title-container {
+      height: 3.8em;
+      overflow: hidden;
+  }
+
+  .title-wrapper {
+    animation: moveUpDown infinite 10s ease-in-out alternate;
+  }
+
+  .title-item {
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+  }
+
+  .upper-title {
+    animation: hideInOutUpper infinite 10s ease-in-out;
+  }
+
+  .lower-title {
+    animation: hideInOutLower infinite 10s ease-in-out;
+  }
+
+@keyframes moveUpDown {
+    50%{
+        transform: translateY(-3.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideInOutUpper {
+    0% {
+        opacity: 100%;
+    }
+    10% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    85% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes hideInOutLower {
+    0% {
+        opacity: 0%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    65% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+  
+  .App {
+    padding: 0 var(--content-edge-margin);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .accent {
+    color: var(--accent-color);
+  }
+  
+  .menu-item {
+    transition: transform 200ms ease-in-out;
+  }
+  
+  .menu-item:hover, .menu-item:focus {
+    cursor: pointer;
+    transform: translateX(1rem);
+  }
