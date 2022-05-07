@@ -19,11 +19,15 @@ function Home() {
   }
 
   const handleMenuHoverIn = (setState) => {
-    setState(true);
+    if (width >= 850) {
+      setState(true);
+    }
   }
 
   const handleMenuHoverOut = (setState) => {
-    setState(false)
+    if (width >= 850) {
+      setState(false)
+    }
   }
 
   return (
