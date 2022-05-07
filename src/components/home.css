@@ -9,35 +9,30 @@ code {
 
   .title-container {
       height: 3.8em;
+      width: 30rem;
       overflow: hidden;
-  }
-
-  .title-wrapper {
-    animation: moveUpDown infinite 10s ease-in-out alternate;
+      position: relative;
   }
 
   .title-item {
       font-size: 3rem;
       display: flex;
       align-items: center;
+      font-style: italic;
   }
 
   .upper-title {
     animation: hideInOutUpper infinite 10s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
   .lower-title {
     animation: hideInOutLower infinite 10s ease-in-out;
+    position: absolute;
+    top: 0;
   }
-
-@keyframes moveUpDown {
-    50%{
-        transform: translateY(-3.5rem);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
 
 @keyframes hideInOutUpper {
     0% {
@@ -93,4 +88,46 @@ code {
   .menu-item:hover, .menu-item:focus {
     cursor: pointer;
     transform: translateX(1rem);
+  }
+
+  @media only screen and (max-width: 850px) {
+    h1 {
+      font-size: 6rem;
+    }
+
+    .title-container {
+      height: 3em;
+    }
+
+    .title-item {
+      font-size: 1.5rem;
+    }
+
+    .App {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .material-symbols-rounded {
+      font-size: 3em;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-icon:hover {
+      cursor: pointer;
+    }
+
+    .menu-icon:active {
+      font-size: 3.5em;
+      opacity: 50%;
+    }
+
+    .menu-item:active{
+      transform: translateX(1rem);
+    }
   }
