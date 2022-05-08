@@ -6,10 +6,13 @@ import useWindowDimensions from '../hooks/useWindowDimensions';
 function Home() {
 
   const { width } = useWindowDimensions();
+  const isHoverableDevice = window.matchMedia(
+    '(hover: hover)'
+  );
   const [IsAbout, setIsAbout] = useState(false);
   const [IsSkills, setIsSkills] = useState(false);
   const [IsProjects, setIsProjects] = useState(false);
-  const [iconState, setIconState] = useState(true)
+  const [iconState, setIconState] = useState(true);
 
   const handleMenuClick = (e) => {
     setIsAbout(!IsAbout);
@@ -32,7 +35,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      {width<=850 ? 
+      {width<=850 && isHoverableDevice.matches ? 
       <span className="material-symbols-rounded menu-icon" onClick={() => handleMenuClick()}>
       {iconState ? "menu" : "close"}
       </span> : <></>}
