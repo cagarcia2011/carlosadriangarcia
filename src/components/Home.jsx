@@ -1,14 +1,49 @@
-import React from 'react';
+import React, { useState }  from 'react';
+import { motion } from "framer-motion";
 import './home.css';
-import { useState } from 'react';
-import useWindowDimensions from '../hooks/useWindowDimensions';
+//import useWindowDimensions from '../hooks/useWindowDimensions';
+
+const menuItemAnimation = {
+  invisibleState: {
+    opacity: 0,
+    x: 0,
+    display: 'none',
+  },
+  visibleState: {
+    x: 5,
+    opacity: 1,
+    scale: 1,
+    display: 'block',
+  },
+}
+
+const headerItemAnimation = {
+  visibleState: {
+    opacity: 1,
+    display: 'block',
+  },
+  invisibleState: {
+    opacity: 0,
+    x: 5,
+    display: 'none',
+  }
+}
 
 function Home() {
 
-  const { width } = useWindowDimensions();
-  const isHoverableDevice = window.matchMedia(
-    '(hover: hover)'
-  );
+  //const { height, width } = useWindowDimensions();
+  const isTouchDevice = () => {  
+    return (('ontouchstart' in window) ||  
+      (navigator.maxTouchPoints > 0) ||  
+      (navigator.msMaxTouchPoints > 0));  
+  }  
+  const [isTouchScreen, setIsTouchScreen] = useState(isTouchDevice());
+  const [TouchMenu, setTouchMenu] = useState(false);
+  
+  window.addEventListener('resize', () => {
+    setIsTouchScreen(isTouchDevice());
+  });
+  
   const [IsAbout, setIsAbout] = useState(false);
   const [IsSkills, setIsSkills] = useState(false);
   const [IsProjects, setIsProjects] = useState(false);
@@ -19,57 +54,67 @@ function Home() {
     setIsSkills(!IsSkills);
     setIsProjects(!IsProjects);
     setIconState(!iconState);
-  }
-
-  const handleMenuHoverIn = (setState) => {
-    if (width >= 850) {
-      setState(true);
-    }
-  }
-
-  const handleMenuHoverOut = (setState) => {
-    if (width >= 850) {
-      setState(false)
-    }
+    setTouchMenu(isTouchScreen ? !IsAbout : false)
   }
 
   return (
     <div className="home-container">
-      {width<=850 && isHoverableDevice.matches ? 
-      <span className="material-symbols-rounded menu-icon" onClick={() => handleMenuClick()}>
+      {isTouchScreen ? 
+      <span className="material-symbols-rounded menu-icon" onClick={(e) => handleMenuClick(e)}>
       {iconState ? "menu" : "close"}
       </span> : <></>}
-      <MenuItem onMouseEnter={() => handleMenuHoverIn(setIsAbout)} 
-      onMouseLeave={() => handleMenuHoverOut(setIsAbout)}
-      menuState={IsAbout} 
-      menuText={IsAbout ? "About." : "Hello."} 
-      cls="menu-item"/>
-      <MenuItem onMouseEnter={() => handleMenuHoverIn(setIsSkills)} 
-      onMouseLeave={() => handleMenuHoverOut(setIsSkills)}
-      menuState={IsSkills} 
-      menuText={IsSkills ? "Skills." : "I am"} 
-      cls="menu-item accent"/>
-      <MenuItem onMouseEnter={() => handleMenuHoverIn(setIsProjects)}
-      onMouseLeave={() => handleMenuHoverOut(setIsProjects)}
-      menuState={IsProjects} 
-      menuText={IsProjects ? "Project." : "Carlos."} 
-      cls="menu-item accent"/>
+      <MenuItem text={'Hello.'} textHovered={'LinkedIn.'} isHovered={IsAbout} setIsHovered={setIsAbout} className='menu-item'>
+      </MenuItem>
+      <MenuItem text={'I am'} textHovered={'LinkedIn.'} isHovered={IsSkills} setIsHovered={setIsSkills} className='menu-item accent'>
+      </MenuItem>
+      <MenuItem text={'Carlos.'} textHovered={'LinkedIn.'} isHovered={IsProjects} setIsHovered={setIsProjects} className='menu-item accent'>
+      </MenuItem>
       <div className="title-container">
+        {!TouchMenu ? 
         <div className="title-wrapper">
           <h2 className="title-item upper-title">Mechanical Engineer</h2>
           <h2 className="title-item lower-title">Web Developer</h2>
-        </div>
+        </div> : <></>}
       </div>
     </div>
   )
 }
 
-const MenuItem = (props) => {
+const MenuItem = ({text, textHovered, isHovered, setIsHovered, ...props}) => {
+
+  function handleItemClick(e) {
+    window.open("https://www.linkedin.com/in/carlos-a-garcia32/", "_blank");
+  }
 
   return (
-    <h1 className={props.cls} onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}>
-        {props.menuText}
-    </h1>
+    <motion.div
+      onHoverStart={() => {
+        setIsHovered(true)
+      }}
+      onHoverEnd={() => {
+        setIsHovered(false)
+      }}>
+      
+      {isHovered && (
+        <motion.h1 
+        {...props}
+        variants={menuItemAnimation}
+        initial="invisibleState"
+        animate="visibleState"
+        onClick= {(e) => handleItemClick(e)}>
+          {textHovered}
+        </motion.h1>
+      )}
+      {!isHovered && (
+        <motion.h1 
+        {...props}
+        variants={headerItemAnimation}
+        initial="invisibleState"
+        animate="visibleState">
+          {text}
+        </motion.h1>
+      )}
+    </motion.div>
   )
 }
 

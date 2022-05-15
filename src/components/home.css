@@ -7,6 +7,30 @@ code {
     font-size: 8rem;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .App {
+    padding: 0 var(--content-edge-margin);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .accent {
+    color: var(--accent-color);
+  }
+  
+  .menu-item {
+    transition: transform 200ms ease-in-out;
+  }
+  
+  .menu-item:hover, .menu-item:focus {
+    cursor: pointer;
+  }
+
   .title-container {
       height: 3.8em;
       width: 30rem;
@@ -18,7 +42,7 @@ code {
       font-size: 3rem;
       display: flex;
       align-items: center;
-      font-style: italic;
+      font-weight: 300;
   }
 
   .upper-title {
@@ -69,30 +93,26 @@ code {
         opacity: 0%;
     }
 }
-  
-  .App {
-    padding: 0 var(--content-edge-margin);
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .accent {
-    color: var(--accent-color);
-  }
-  
-  .menu-item {
-    transition: transform 200ms ease-in-out;
-  }
-  
-  .menu-item:hover, .menu-item:focus {
-    cursor: pointer;
-    transform: translateX(1rem);
-  }
+
+.material-symbols-rounded {
+  font-size: 3em;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.menu-icon:active {
+  font-size: 3.5em;
+  opacity: 50%;
+}
 
   @media only screen and (max-width: 850px) {
     h1 {
-      font-size: 6rem;
+      font-size: 4.5rem;
     }
 
     .title-container {
@@ -112,6 +132,9 @@ code {
       position: relative;
     }
 
+    .home-container {
+      width: 75%;
+    }
     .material-symbols-rounded {
       font-size: 3em;
       position: absolute;
@@ -126,9 +149,5 @@ code {
     .menu-icon:active {
       font-size: 3.5em;
       opacity: 50%;
-    }
-
-    .menu-item:active{
-      transform: translateX(1rem);
     }
   }
