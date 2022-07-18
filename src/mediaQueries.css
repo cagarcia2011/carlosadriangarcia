@@ -1,0 +1,21 @@
+/* == MEDIUM DEVICES == */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/* == SMALL DEVICES == */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section > h2{
+        margin-bottom: 2rem;
+    }
+}
