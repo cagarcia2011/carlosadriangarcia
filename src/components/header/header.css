@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    padding-top: 7rem;
+    padding-top: 4rem;
     overflow: hidden;
 }
 
@@ -50,14 +50,14 @@ header {
 /* == ME == */
 .me {
     /*background: var(--accent-color);*/
-    width: 40rem;
-    height: 40rem;
+    width: 25rem;
+    height: 33.33rem;
     position: absolute;
-    left: calc(50% - 20rem);
-    margin-top: 4rem;
+    left: calc(50% - 12.5rem);
+    margin-top: 2rem;
     overflow: hidden;
+    background: var(--variant-bg-color);
     border-radius: 20rem 20rem 0 0;
-    
 }
 
 /* == SCROLL DOWN == */
