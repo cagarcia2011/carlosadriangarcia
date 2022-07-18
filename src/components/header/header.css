@@ -76,11 +76,15 @@ header {
 /* == MEDIA QUERIES (MEDIUM DEVICES) == */
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 70vh;
     }
+}
 
+@media screen and (max-width: 1080px) {
     .me {
-        border-radius: 15rem 15rem 0 0;
+        width: 20rem;
+        height: 26.66rem;
+        left: calc(50% - 10rem);
     }
 }
 
@@ -89,6 +93,7 @@ header {
     header {
         height: 100vh;
     }
+
     .header__socials,
     .scroll__down {
         display: none;
