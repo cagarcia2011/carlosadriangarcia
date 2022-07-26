@@ -8,7 +8,8 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 import {useState} from 'react'
 
-const Nav = () => {
+
+function Nav() {
   const [activeNav, setActiveNav] = useState('#home')
 
 

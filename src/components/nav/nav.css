@@ -1,7 +1,6 @@
 nav {
     background: rgba(0, 0, 0, 0.5);
     width: max-content;
-    height: calc(max-content + 1rem);
     display: flex;
     gap: 0.8rem;
     padding: 0.7rem 1.7rem;
@@ -24,11 +23,10 @@ nav a {
 
 nav a:hover {
     background: rgba(0, 0, 0, 0.5);
-    scale: 1.2;
 }
 
 nav a.active {
     background: var(--primary-bg-color);
     color: white;
-    scale: 1.2;
+    
 }
