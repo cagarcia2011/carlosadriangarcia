@@ -9,6 +9,7 @@ import Contact from "./components/contact/Contact"
 import Footer from "./components/footer/Footer"
 
 function App() {
+
   return (
     <>
       <Header />
