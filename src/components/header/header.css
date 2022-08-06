@@ -3,6 +3,7 @@ header {
   min-height: 60rem;
   padding-top: 6rem;
   overflow: hidden;
+  z-index: 0;
 }
 
 .header__container {
@@ -66,6 +67,20 @@ header {
   overflow: hidden;
   background: var(--variant-bg-color);
   border-radius: 50%;
+  box-shadow: 22px -1px 25px rgba(0, 0, 0, 0.4)  ; 
+	-webkit-box-shadow: 22px -1px 25px rgba(0, 0, 0, 0.4)  ; 
+	-moz-box-shadow: 22px -1px 25px rgba(0, 0, 0, 0.4)  ; 
+  position: relative;
+  transition: all 400ms ease-in-out;
+}
+
+.me:hover {
+  cursor: pointer;
+  left: 0.2rem;
+  transform: rotateZ(5deg);
+  box-shadow: 1px -1px 25px rgba(0, 0, 0, 0.4)  ; 
+	-webkit-box-shadow: 1px -1px 25px rgba(0, 0, 0, 0.4)  ; 
+	-moz-box-shadow: 1px -1px 25px rgba(0, 0, 0, 0.4)  ;
 }
 
 /* == MEDIA QUERIES (MEDIUM DEVICES) == */
@@ -82,9 +97,6 @@ header {
 
 /* == MEDIA QUERIES (SMALL DEVICES) == */
 @media screen and (max-width: 600px) {
-  header {
-    min-height: 45rem;
-  }
   .me {
     width: 20rem;
   }

@@ -7,11 +7,42 @@ import { BsListCheck } from 'react-icons/bs'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 import {useState} from 'react'
-
+// import {useScrollPosition} from '../../hooks/useScrollPosition.js'
 
 function Nav() {
   const [activeNav, setActiveNav] = useState('#home')
 
+  // const scrollPosition = useScrollPosition()
+
+  // useEffect(() => {
+  //   let prevScrollPos = window.scrollY
+
+  //   const setActivePosition = (pos) => {
+  //     if (pos < 600) {setActiveNav('#home')}
+  //     else if (pos < 1900) {setActiveNav('#about')}
+  //     else if (pos < 3000) {setActiveNav('#skills')}
+  //     else if (pos < 4200) {setActiveNav('#experience')}
+  //     else if (pos < 5400) {setActiveNav('#portfolio')}
+  //     else {setActiveNav('#contact')}
+  //   }
+
+  //   const scrolledMoreThanThreshold = (currentScrollYPosition) =>
+  //     Math.abs(currentScrollYPosition - prevScrollPos) > 10;
+
+  //     const updatePosition = () => {
+  //       const currentScrollYPosition = window.scrollY;
+  //       if (scrolledMoreThanThreshold(currentScrollYPosition)) {
+  //         setActivePosition(currentScrollYPosition)
+  //       }
+  //     }
+
+  //   const onScroll = () => window.requestAnimationFrame(updatePosition);
+
+  //   window.addEventListener("scroll", onScroll);
+
+  //   return () => window.removeEventListener("scroll", onScroll);
+
+  // }, [])
 
   return (
     <nav>
