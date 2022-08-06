@@ -1,5 +1,6 @@
 header {
   height: 100vh;
+  min-height: 60rem;
   padding-top: 6rem;
   overflow: hidden;
 }
@@ -8,10 +9,6 @@ header {
   text-align: center;
   height: 100%;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
 }
 
 /* == CTA == */
@@ -53,9 +50,18 @@ header {
 }
 
 /* == ME == */
+
+.img-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .me {
   /*background: var(--accent-color);*/
-  width: 50%;
+  width: 30rem;
   margin-top: 2rem;
   overflow: hidden;
   background: var(--variant-bg-color);
@@ -64,9 +70,7 @@ header {
 
 /* == MEDIA QUERIES (MEDIUM DEVICES) == */
 @media screen and (max-width: 1024px) {
-  header {
-    height: 100vh;
-  }
+
 }
 
 @media screen and (max-width: 1080px) {
@@ -79,7 +83,10 @@ header {
 /* == MEDIA QUERIES (SMALL DEVICES) == */
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    min-height: 45rem;
+  }
+  .me {
+    width: 20rem;
   }
 }
 

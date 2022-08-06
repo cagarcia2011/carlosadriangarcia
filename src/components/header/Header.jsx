@@ -15,9 +15,11 @@ const Header = () => {
         </h4>
         <HeaderSocials />
         <CTA />
-        <div className="me">
-          <img src={ME} alt="Me" />
-        </div>
+       <div className="img-container">
+          <div className="me">
+            <img src={ME} alt="Me" />
+          </div>
+       </div>
       </div>
     </header>
   )
