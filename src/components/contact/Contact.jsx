@@ -4,7 +4,10 @@ import './contact.css'
 function Contact() {
   return (
     <section id="contact">
-      Contact
+      <div className="container contact__container">
+        <h1>Contact Me</h1>
+        
+      </div>
     </section>
   )
 }

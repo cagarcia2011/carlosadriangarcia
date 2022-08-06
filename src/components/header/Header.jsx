@@ -6,8 +6,8 @@ import HeaderSocials from './HeaderSocials'
 
 const Header = () => {
   return (
-    <header>
-      <div className="container header__container" id="home">
+    <header id="home">
+      <div className="container header__container">
         <h4>Hi I'm</h4>
         <h1>Carlos Garcia</h1>
         <h4 className="text-light">
@@ -16,9 +16,11 @@ const Header = () => {
         <HeaderSocials />
         <CTA />
        <div className="img-container">
-          <div className="me">
-            <img src={ME} alt="Me" />
-          </div>
+          <a href="#about" className="img_anchor">
+            <div className="me">
+              <img src={ME} alt="Me" />
+            </div>
+          </a>
        </div>
       </div>
     </header>
