@@ -1,33 +1,40 @@
 nav {
-    background: rgba(0, 0, 0, 0.5);
-    width: max-content;
-    display: flex;
-    gap: 0.8rem;
-    padding: 0.7rem 1.7rem;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.7rem 1.7rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
 }
 
 nav a {
-    background: transparent;
-    padding: 0.6rem;
-    border-radius: 50%;
-    display: flex;
-    color: var(--accent-color);
-    font-size: 1.4rem;
+  background: transparent;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--accent-color);
+  font-size: 1.4rem;
 }
 
 nav a:hover {
-    background: rgba(0, 0, 0, 0.5);
-    scale: 1.2;
+  background: rgba(0, 0, 0, 0.5);
+  scale: 1.2;
 }
 
 nav a.active {
-    background: var(--primary-bg-color);
-    color: white;
-    scale: 1.2;
+  background: var(--primary-bg-color);
+  color: white;
+  scale: 1.2;
+}
+
+@media screen and (max-width: 375px) {
+  nav a {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
 }

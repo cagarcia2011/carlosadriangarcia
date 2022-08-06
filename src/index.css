@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --primary-bg-color: #2e323e;
   --variant-bg-color: #3478c6;
-  --primary-color: #FFF;
+  --primary-color: #fff;
   --accent-color: #88c0d0;
   --color-light: #c7d4ee;
 
@@ -35,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary-bg-color);
@@ -67,7 +67,8 @@ section {
   height: 100vh;
 }
 
-section > h2, section > h5 {
+section > h2,
+section > h5 {
   text-align: center;
   color: var(--color-light);
 }
@@ -90,14 +91,13 @@ a:hover {
   color: white;
 }
 
-
 .btn {
   width: 10rem;
   display: inline-block;
   background: transparent;
   color: var(--primary-color);
   padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  border-radius: 2.5rem;
   cursor: pointer;
   border: 1px solid var(--primary-color);
   transition: var(--transition-all);
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--variant-bg-color);;
+  background: var(--variant-bg-color);
   color: var(--primary-bg-color);
 }
 
@@ -119,4 +119,3 @@ img {
   width: 100%;
   object-fit: cover;
 }
-
