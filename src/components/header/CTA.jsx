@@ -1,5 +1,5 @@
 import React from 'react'
-import Resume from '../assets/Carlos-Garcia-Resume-08-22.pdf'
+import Resume from '../../assets/Carlos-Garcia-Resume-08-22.pdf'
 
 function CTA() {
     //Add download attribute to a and the Resume object to href:
