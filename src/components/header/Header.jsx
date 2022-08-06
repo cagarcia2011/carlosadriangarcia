@@ -3,6 +3,7 @@ import './header.css'
 import CTA from './CTA'
 import ME from '../../assets/Pic1.png'
 import HeaderSocials from './HeaderSocials'
+import Typical from 'react-typical'
 
 const Header = () => {
   return (
@@ -11,7 +12,17 @@ const Header = () => {
         <h4>Hi I'm</h4>
         <h1>Carlos Garcia</h1>
         <h4 className="text-light">
-          Engineer / Python Dev / Web Dev
+          <Typical 
+            loop={Infinity}
+            steps={[
+                "Engineer",
+                1000,
+                "Web Dev",
+                1000,
+                "Python Dev",
+                1000
+            ]}
+          />
         </h4>
         <HeaderSocials />
         <CTA />

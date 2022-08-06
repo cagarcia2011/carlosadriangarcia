@@ -1,85 +1,86 @@
 header {
-    height: 100vh;
-    padding-top: 6rem;
-    overflow: hidden;
+  height: 100vh;
+  padding-top: 6rem;
+  overflow: hidden;
 }
 
 .header__container {
-    text-align: center;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 /* == CTA == */
 
 .cta {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
 }
 
 /* == HEADER SOCIALS == */
 
 .header__socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 .header__socials > a {
-    color: var(--variant-bg-color);
-    font-size: 1.5rem;
+  color: var(--variant-bg-color);
+  font-size: 1.5rem;
 }
 
 .header__socials > a:hover {
-    color: white;
-    scale: 1.2;
+  color: white;
+  scale: 1.2;
 }
 
 .header__socials > a:active {
-    color: white;
-    scale: 1.2;
+  color: white;
+  scale: 1.2;
 }
 
 .header__socials > a:focus {
-    color: white;
-    scale: 1.2;
+  color: white;
+  scale: 1.2;
 }
 
 /* == ME == */
 .me {
-    /*background: var(--accent-color);*/
-    width: 50%;
-    margin-top: 2rem;
-    overflow: hidden;
-    background: var(--variant-bg-color);
-    border-radius: 50%;
+  /*background: var(--accent-color);*/
+  width: 50%;
+  height: auto;
+  margin-top: 2rem;
+  overflow: hidden;
+  background: var(--variant-bg-color);
+  border-radius: 50%;
 }
 
 /* == MEDIA QUERIES (MEDIUM DEVICES) == */
 @media screen and (max-width: 1024px) {
-    header {
-        height: 70vh;
-    }
+  header {
+    height: 70vh;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    .me {
-        width: 80%;
-        height: auto;
-        /* background-color: transparent; */
-    }
+  .me {
+    width: 80%;
+    height: auto;
+    /* background-color: transparent; */
+  }
 }
 
 /* == MEDIA QUERIES (SMALL DEVICES) == */
 @media screen and (max-width: 600px) {
-    header {
-        height: 100vh;
-    }
+  header {
+    height: 100vh;
+  }
 }
