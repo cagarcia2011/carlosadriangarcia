@@ -45,9 +45,9 @@ function About() {
                 <div className="card-bg"></div>
                 <div className="about__card-content">
                   <MdWork className='about__icon' />
-                  <h4>Manufacturing Engineer</h4>
-                  <h5>Data Engineering Projects</h5>
-                  <h5>Aug 2021 ~ Present</h5>
+                  <h4>Personal Projects</h4>
+                  <h5>Web Development</h5>
+                  <h5>Data Science</h5>
                 </div>
               </div>
             </div>
