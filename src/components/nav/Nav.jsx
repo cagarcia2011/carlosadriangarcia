@@ -2,10 +2,10 @@ import React from 'react'
 import './nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import { FiUser } from 'react-icons/fi'
-import { MdWorkOutline } from 'react-icons/md'
-import { BsListCheck } from 'react-icons/bs'
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
-import { BiMessageSquareDetail } from 'react-icons/bi'
+// import { MdWorkOutline } from 'react-icons/md'
+// import { BsListCheck } from 'react-icons/bs'
+// import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
+// import { BiMessageSquareDetail } from 'react-icons/bi'
 import {useState} from 'react'
 // import {useScrollPosition} from '../../hooks/useScrollPosition.js'
 
@@ -52,7 +52,7 @@ function Nav() {
       <a href="#about"
       onClick={() => setActiveNav('#about')}
       className={activeNav === '#about' ? 'active' : ''}><FiUser /></a>
-      <a href="#skills"
+      {/* <a href="#skills"
       onClick={() => setActiveNav('#skills')}
       className={activeNav === '#skills' ? 'active' : ''}><BsListCheck /></a>
       <a href="#experience"
@@ -63,7 +63,7 @@ function Nav() {
       className={activeNav === '#portfolio' ? 'active' : ''}><AiOutlineFundProjectionScreen /></a>
       <a href="#contact"
       onClick={() => setActiveNav('#contact')}
-      className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
+      className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a> */}
     </nav>
   )
 }
