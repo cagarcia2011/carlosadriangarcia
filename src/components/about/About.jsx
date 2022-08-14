@@ -12,7 +12,7 @@ function About() {
           <div className="about__summary">
             <h1>About Me</h1>
             <p>
-            I am a creative, enthusiastic, and innovative Engineer with a background in 
+            I am a creative, enthusiastic, and innovative Engineer and self-taught developer with a background in 
             Manufacturing Engineering, Python development, and Web development. <br/>
             Excellent at collaborating in a multifunctional team environment to reach 
             project goals and deliverables.
@@ -45,9 +45,9 @@ function About() {
                 <div className="card-bg"></div>
                 <div className="about__card-content">
                   <MdWork className='about__icon' />
-                  <h4>Personal Projects</h4>
+                  <h4>Self-Taught Developer</h4>
+                  <h5>Python Development</h5>
                   <h5>Web Development</h5>
-                  <h5>Data Science</h5>
                 </div>
               </div>
             </div>
