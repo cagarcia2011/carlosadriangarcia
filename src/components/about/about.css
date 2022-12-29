@@ -160,10 +160,10 @@
 
 /* == SMALL DEVICES == */
 @media screen and (max-width: 1000px) {
-  #about {
+  /* #about {
     margin-top: 5rem;
     height: 80rem;
-  }
+  } */
   .about__container {
     height: 80rem;
   }
@@ -193,8 +193,8 @@
 }
 
 @media screen and (min-height: 800px) {
-  #about {
+  /* #about {
     margin-top: 10rem;
-  }
+  } */
 
 }

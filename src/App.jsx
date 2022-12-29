@@ -1,4 +1,7 @@
 import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+
 import Header from "./components/header/Header"
 import Nav from "./components/nav/Nav"
 import About from "./components/about/About"
@@ -10,16 +13,18 @@ import About from "./components/about/About"
 
 function App() {
   return (
-    <>
-      <Header />
+    <Router>
+      <Routes>
+        <Route path='/' element={<Header />} exact />
+        <Route path='/about' element={<About />} exact />
+      </Routes>
       <Nav />
-      <About />
       {/* <Skills />
       <Experience />
       <Portfolio />
       <Contact />
       <Footer /> */}
-    </>
+    </Router>
   );
 }
 
