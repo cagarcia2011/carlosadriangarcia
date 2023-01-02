@@ -15,9 +15,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.1",
-    "react-text-animations": "^1.1.10",
     "source-map-resolve": "^0.6.0",
-    "web-vitals": "^3.1.0"
+    "web-vitals": "^3.1.0",
+    "react-text-animations": "^1.1.10"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
