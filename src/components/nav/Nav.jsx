@@ -22,14 +22,19 @@ function Nav() {
     setActiveNav(location.pathname)
   }, [location.pathname])
 
-
   return (
     <nav>
       <a href='/'
-      onClick={() => navigate('/')}
+      onClick={(e) => {
+        e.preventDefault()
+        navigate('/');
+      }}
       className={activeNav === '/' ? 'active': ''}><AiOutlineHome /></a>
       <a href="/about"
-      onClick={() => navigate('/about')}
+      onClick={(e) => {
+        e.preventDefault()
+        navigate('/about')
+      }}
       className={activeNav === '/about' ? 'active' : ''}><FiUser /></a>
       {/* <a href="#skills"
       onClick={() => setActiveNav('#skills')}
