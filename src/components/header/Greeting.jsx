@@ -10,7 +10,7 @@ function getSpanList(message, cls, highlightInitials=false) {
     return message.split("").map((char, index) => {
         modifiedCls = cls
         if (highlightInitials) {
-            if (char !== " " && emptySpace) {
+            if (index === 0 || (char !== " " && emptySpace)) {
                 emptySpace = false
                 modifiedCls += " initial"
             } else if (char === " " && !emptySpace) {
@@ -30,9 +30,9 @@ function GenerateGreeting({greeting, name}) {
 
     return (
         <>
-            {greetingSpanList.map((el) => (<>{el}</>))}
+            {greetingSpanList.map((el, index) => (<span key={`${index}greeting`}>{el}</span>))}
             <br />
-            {nameSpanList.map((el) => (<>{el}</>))}
+            {nameSpanList.map((el, index) => (<span key={`${index}name`}>{el}</span>))}
         </>
     )
 }
