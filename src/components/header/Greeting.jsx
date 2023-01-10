@@ -44,7 +44,7 @@ const Greeting = () => {
     const name = "Carlos Adrian Garcia"
 
     const onLetterHover = (e) => {
-        e.target.style.setProperty("--scale", 1.3)
+        e.target.style.setProperty("--scale", 1.4)
     }
 
     const onLetterHoverOut = (e) => {
