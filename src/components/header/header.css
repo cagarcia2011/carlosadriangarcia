@@ -92,6 +92,10 @@ header {
 	-moz-box-shadow: 1px -1px 25px rgba(0, 0, 0, 0.4)  ;
 }
 
+.greeting__container {
+  cursor: pointer;
+}
+
 .header__letter {
   font-size: 2rem;
   line-height: 2.8rem;
@@ -113,8 +117,8 @@ header {
   cursor: pointer;
   color: var(--primary-bg-color);
   --color: var(--primary-color);
-  scale: 1.3;
-  transition: all ease-in-out 500ms;
+  scale: 1.4;
+  transition: all ease-in-out 200ms;
 }
 
 .initial:hover {
@@ -126,7 +130,7 @@ header {
   position: absolute;
   color: var(--color);
   left: 0rem;
-  transition: all 300ms ease-in-out;
+  transition: all 150ms ease-in-out;
   opacity: 1;
   scale: var(--scale);
   text-shadow: 0rem 0.25rem 0.3rem  #222,
