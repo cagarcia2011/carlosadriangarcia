@@ -4,7 +4,7 @@ import TransitionComponent from '../transitions/TransitionComponent'
 import CTA from './CTA'
 import HeaderSocials from './HeaderSocials'
 
-function getSpanList(message, cls, highlightInitials=false) {
+function getSpanList(message, cls, highlightInitials=false, {onLetterHover, onLetterHoverOut}) {
     let emptySpace = false
     let modifiedCls = cls
     return message.split("").map((char, index) => {
@@ -18,15 +18,15 @@ function getSpanList(message, cls, highlightInitials=false) {
             }      
         }
         return (
-            <span className={`header__letter ${modifiedCls}`} key={index}>{char === " " ? <>   </> : char}</span>
+            <span data={char} className={`header__letter ${modifiedCls}`} key={index} onMouseOver={onLetterHover} onMouseOut={onLetterHoverOut}>{char === " " ? <>   </> : char}</span>
         )
     })
 }
 
-function GenerateGreeting({greeting, name}) {
-    const greetingSpanList = getSpanList(greeting, "greeting__letter")
+function GenerateGreeting({greeting, name, onLetterHover, onLetterHoverOut}) {
+    const greetingSpanList = getSpanList(greeting, "greeting__letter", false, {onLetterHover, onLetterHoverOut})
 
-    const nameSpanList = getSpanList(name, "name__letter", true)
+    const nameSpanList = getSpanList(name, "name__letter", true, {onLetterHover, onLetterHoverOut})
 
     return (
         <>
@@ -43,37 +43,17 @@ const Greeting = () => {
     const greeting = "Hi, I'm"
     const name = "Carlos Adrian Garcia"
 
+    const onLetterHover = (e) => {
+        e.target.style.setProperty("--scale", 1.3)
+    }
+
+    const onLetterHoverOut = (e) => {
+        e.target.style.setProperty("--scale", 1)
+    }
+
   return (
     <div className="greeting__container">
-        {/* <span className="header__letter greeting__letter">H</span>
-        <span className="header__letter greeting__letter">i</span>
-        <span className="header__letter greeting__letter">, </span>
-        <>   </>
-        <span className="header__letter greeting__letter">I</span>
-        <span className="header__letter greeting__letter">'</span>
-        <span className="header__letter greeting__letter">m</span>
-        <br />
-        <span className="header__letter name__letter initial">C</span>
-        <span className="header__letter name__letter">a</span>
-        <span className="header__letter name__letter">r</span>
-        <span className="header__letter name__letter">l</span>
-        <span className="header__letter name__letter">o</span>
-        <span className="header__letter name__letter">s </span>
-        <>   </>
-        <span className="header__letter name__letter initial">A</span>
-        <span className="header__letter name__letter">d</span>
-        <span className="header__letter name__letter">r</span>
-        <span className="header__letter name__letter">i</span>
-        <span className="header__letter name__letter">a</span>
-        <span className="header__letter name__letter">n </span>
-        <>   </>
-        <span className="header__letter name__letter initial">G</span>
-        <span className="header__letter name__letter">a</span>
-        <span className="header__letter name__letter">r</span>
-        <span className="header__letter name__letter">c</span>
-        <span className="header__letter name__letter">i</span>
-        <span className="header__letter name__letter">a</span> */}
-        <GenerateGreeting greeting={greeting} name={name} />
+        <GenerateGreeting greeting={greeting} name={name} onLetterHover={onLetterHover} onLetterHoverOut={onLetterHoverOut}/>
         <TransitionComponent textList={headLines} />
         <HeaderSocials />
         <CTA />
