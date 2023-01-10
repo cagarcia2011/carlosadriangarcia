@@ -106,37 +106,41 @@ header {
   --color: var(--primary-color);
   --scale: 1;
   scale: 1;
+  z-index: 1;
 }
 
 .initial {
   --color: var(--accent-color)
-  color: var(--accent-color)
+  color: var(--accent-color);
+  z-index: 1;
 }
 
 .header__letter:hover {
   cursor: pointer;
   color: var(--primary-bg-color);
   --color: var(--primary-color);
-  scale: 1.4;
-  transition: all ease-in-out 200ms;
+  scale: 1.8;
+  transition: all ease-in-out 50ms;
+  z-index: 0;
 }
 
 .initial:hover {
   --color: var(--accent-color);
+  z-index: 0;
 }
 
 .header__letter::after {
   content: attr(data);
-  position: absolute;
   color: var(--color);
   left: 0rem;
   transition: all 150ms ease-in-out;
   opacity: 1;
   scale: var(--scale);
   text-shadow: 0rem 0.25rem 0.3rem  #222,
-               0rem 0.5rem 0.35rem rgba(0,0,0,0.25),
-               0rem 0.55rem 0.40rem rgba(0,0,0,0.20),
-               0rem 0.6rem 0.45rem rgba(0,0,0,0.20);
+  0rem 0.5rem 0.35rem rgba(0,0,0,0.25),
+  0rem 0.55rem 0.40rem rgba(0,0,0,0.20),
+  0rem 0.6rem 0.45rem rgba(0,0,0,0.20);
+  position: absolute;
   z-index: 2;
 }
 
