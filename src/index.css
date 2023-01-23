@@ -1,121 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --primary-bg-color: #1d1c1c;
-  --variant-bg-color: #22b8cf;
-  --primary-color: #fff;
-  --accent-color: #94ebfc;
-  --color-light: #c7d4ee;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap");
 
-  --transition-all: all 400ms ease;
-
-  --content-edge-margin: 20rem;
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
-  --container-width-ms: 90%;
+@layer base {
+  html {
+    @apply font-poppins;
+  }
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
-
-::-webkit-scrollbar {
-  display: none;
+@layer components {
+  .about-box {
+    @apply dark:border-2 rounded-xl p-6 flex gap-4 border-[#212425];
+  }
+  .after-effect {
+    @apply text-7xl font-bold font-robotoSlab inline-block relative after:absolute  transform after:-translate-y-[50%] after:bg-gradient-to-r from-accent-color to-variant-bg after:h-0.5 after:rounded-md after:content-[""] md:after:w-48  after:top-[50%] dark:text-white;
+  }
+  .resume-btn {
+    @apply bg-[#EDF2F2] cursor-default px-5 py-2 rounded-lg  text-gray-lite dark:bg-[#1C1C1C] dark:text-[#A6A6A6];
+  }
+  .socialbtn {
+    @apply w-10 h-10 rounded-lg hover:bg-gradient-to-r from-accent-color to-variant-bg  flex justify-center items-center  hover:text-white transition-colors duration-300  ease-in-out bg-[#F3F6F6] dark:bg-[#212425];
+  }
+  .fillter-btn {
+    @apply text-gray-lite dark:text-[#A6A6A6] hover:text-accent-color transition duration-300 cursor-pointer;
+  }
 }
-
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-color);
-  line-height: 1.7;
-}
-
-/* == GENERAL STYLES == */
-
-.container {
-  width: var(--container-width-lg);
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-section {
-  margin-top: 8rem;
-  height: 100vh;
-}
-
-section > h2,
-section > h5 {
-  text-align: center;
-  color: var(--color-light);
-}
-
-section > h2 {
-  color: var(--primary-color);
-  margin-bottom: 3rem;
-}
-
-.text-light {
-  color: var(--color-light);
-}
-
-a {
-  color: var(--variant-bg-color);
-  transition: var(--transition-all);
-}
-
-a:hover {
-  color: white;
-}
-
-.btn {
-  width: 10rem;
-  display: inline-block;
-  background: transparent;
-  color: var(--primary-color);
-  padding: 0.75rem 1.2rem;
-  border-radius: 2.5rem;
-  cursor: pointer;
-  border: 1px solid var(--primary-color);
-  transition: var(--transition-all);
-}
-
-.btn:hover {
-  background: white;
-  color: var(--primary-bg-color);
-  border-color: transparent;
-}
-
-.btn-primary {
-  background: var(--variant-bg-color);
-  color: var(--primary-bg-color);
-}
-
-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
+#root {
+  overflow: hidden;
 }

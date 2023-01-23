@@ -1,29 +1,45 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-import Header from "./components/header/Header"
-import Nav from "./components/nav/Nav"
-import About from "./components/about/About"
-// import Skills from "./components/skills/Skills"
-// import Experience from "./components/experience/Experience"
-// import Portfolio from "./components/portfolio/Portfolio"
-// import Contact from "./components/contact/Contact"
-// import Footer from "./components/footer/Footer"
+import AOS from "aos"
+
+import { ToastContainer } from "react-toastify"
+
+import ContextProvider from "./Context/ContextProvider"
+
+import { Home } from './Pages/Home'
+import { About } from "./Pages/About"
+import { Contact } from "./Pages/Contact"
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+    AOS.refresh();
+  }, [])
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Header />} exact />
-        <Route path='/about' element={<About />} exact />
-      </Routes>
-      <Nav />
-      {/* <Skills />
-      <Experience />
-      <Portfolio />
-      <Contact />
-      <Footer /> */}
-    </Router>
+    <>
+      <ContextProvider>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home />} exact >
+              <Route index element={<About />} />
+              <Route path="about" element={<About />} />
+              <Route path='contact' element={<Contact />} />
+            </Route>
+          </Routes>
+        </Router>
+      </ContextProvider>
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        />
+    </>
   );
 }
 
