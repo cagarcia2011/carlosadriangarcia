@@ -90,9 +90,9 @@ const HomeCard = () => {
                   {" "}
                   <a
                     className="hover:text-accent-color duration-300 transition"
-                    href="tel:+1234567890"
+                    href="tel:+17875978730"
                   >
-                    +1(787) 597 8730
+                    +1 (787) 597 8730
                   </a>
                 </p>
               </div>
@@ -110,9 +110,9 @@ const HomeCard = () => {
                   {" "}
                   <a
                     className="hover:text-accent-color duration-300 transition"
-                    href="mailto:ibthemes21@gmail.com"
+                    href="mailto:ca.garcia2011@gmail.com"
                   >
-                    carlos.gi2022@protonmail.com
+                    ca.garcia2011@gmail.com
                   </a>
                 </p>
               </div>
