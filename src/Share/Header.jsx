@@ -27,8 +27,8 @@ const Header = () => {
               inactiveClassName=" transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white   hover:bg-gradient-to-r from-accent-color to-variant-bg  "
               className={`${
                 item.id === "06" ? "block lg:hidden" : " "
-              }  w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center ${
-                a.pathname === "/homeTwo" && item.id === "01"
+              }  w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6] justify-center flex flex-col items-center ${
+                a.pathname === "/home" && item.id === "01"
                   ? " lg:text-white lg:dark:text-white   lg:bg-gradient-to-r from-accent-color to-variant-bg "
                   : " "
               }`}

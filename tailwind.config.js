@@ -47,6 +47,7 @@ module.exports = {
         "variant-bg": "#22b8cf",
         "primary-color": "#fff",
         "accent-color": "#56b0bc",
+        "accent-light": "#EEF5FA",
         "color-light": "#c7d4ee",
         transparent: 'transparent',
         gray: "#F3F6F6",

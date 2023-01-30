@@ -47,7 +47,7 @@ const ContactForm = ({ condition }) => {
         condition
           ? "mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2"
           : "  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px]  p-4  "
-      } bg-color-810 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]`}
+      } bg-transparent border-accent-light border-2 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]`}
     >
       <h3 className="text-4xl  ">
         <span className="text-gray-lite dark:text-[#A6A6A6] ">

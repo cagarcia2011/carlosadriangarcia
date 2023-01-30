@@ -10,6 +10,7 @@ import ContextProvider from "./Context/ContextProvider"
 import { Home } from './Pages/Home'
 import { About } from "./Pages/About"
 import { Contact } from "./Pages/Contact"
+import { Resume } from "./Pages/Resume"
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
               <Route index element={<About />} />
               <Route path="about" element={<About />} />
               <Route path='contact' element={<Contact />} />
+              <Route path='resume' element={<Resume />} />
             </Route>
           </Routes>
         </Router>
