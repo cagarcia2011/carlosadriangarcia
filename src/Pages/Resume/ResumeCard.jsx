@@ -56,7 +56,9 @@ const ResumeCard = () => {
                 </span>
                 <h3 className="text-xl dark:text-white"> {item.title} </h3>
                 <p className="dark:text-[#b7b7b7]">{item.place}</p>
-                <p className="dark:text-[#b7b7b7]">GPA: {item.gpa}</p>
+                {
+                    item.gpa && <p className="dark:text-[#b7b7b7]">GPA: {item.gpa}</p>
+                }
             </div>
             ))}
         </div>

@@ -90,9 +90,9 @@ const HomeCard = () => {
                   {" "}
                   <a
                     className="hover:text-accent-color duration-300 transition"
-                    href="tel:+17875978730"
+                    href="tel:+18123618052"
                   >
-                    +1 (787) 597 8730
+                    +1 (812) 361 8052
                   </a>
                 </p>
               </div>
