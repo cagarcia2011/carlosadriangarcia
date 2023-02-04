@@ -107,44 +107,76 @@ const AllData = () => {
         {
             id: 2,
             color: "#FF6464",
-            name: "React JS",
+            name: "React",
             number: "80"
         },
         {
             id: 3,
             color: "#FF6464",
+            name: "Vue",
+            number: "60"
+        },
+        {
+            id: 4,
+            color: "#FF6464",
+            name: "Node.js",
+            number: "70"
+        },
+        {
+            id: 5,
+            color: "#FF6464",
             name: "HTML & CSS",
             number: "85"
         },
         {
-            id: 4,
+            id: 6,
             color: "#FF6464",
             name: "Python",
             number: "95"
         },
         {
-            id: 5,
+            id: 7,
             color: "#FF6464",
             name: "SQL",
             number: "80"
+        },
+        {
+            id: 8,
+            color: "#FF6464",
+            name: "UI Design",
+            number: "60"
         }
       ]
 
       const educationArray = [
         {
+            id: 2,
+            date: "2022-In Progreess",
+            title: "Certification - Computer Science",
+            place: "Codecademy.com",
+            color: "#EEF5FA"
+        },
+        {
+            id: 3,
+            date: "2022-In Progress",
+            title: "Certification - Full-Stack Engineer",
+            place: "Codecademy.com",
+            color: "#EEF5FA"
+        },
+        {
             id: 1,
-            data: "2014-2020",
+            date: "2014-2020",
             title: "Bachelor of Science in Mechanical Engineering",
             place: "University of Puerto Rico - Mayaguez Campus",
             gpa: "3.92",
             color: "#EEF5FA"
-        }
+        },
       ]
 
       const experienceArray = [
         {
             id: 1,
-            data: "2021-Present",
+            date: "2021-Present",
             title: "Manufacturing Engineer - Software Developer",
             place: "Boston Scientific",
             location: "Spencer, Indiana, US",
@@ -157,8 +189,8 @@ const AllData = () => {
             id: 1,
             icon: iconPhone,
             title: "Phone ",
-            item1: "+1(787) 597-8730",
-            item2: "+1(787) 597-8730",
+            item1: "+1(812) 361-8052",
+            item2: "+1(812) 361-8052",
             bg: "#FCF4FF"
         },
         {
@@ -181,6 +213,16 @@ const AllData = () => {
         },
       ]
 
+      const knowledges = [
+        "Web Development",
+        "Project Management",
+        "Git & GitHub",
+        "Linux",
+        "MS Power Platform Apps",
+        "Data Science",
+        "Debugging & Troubleshooting",
+      ]
+
   return {
     local,
     check,
@@ -190,7 +232,8 @@ const AllData = () => {
     educationArray,
     experienceArray,
     contactArray,
-    skillsArray
+    skillsArray,
+    knowledges
   }
 }
 

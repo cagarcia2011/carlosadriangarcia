@@ -29,7 +29,7 @@ const About = () => {
                   <div className="lg:mr-16">
                     <p className="text-gray-lite  dark:text-color-910 leading-7">
                     I am a creative, enthusiastic, and innovative Engineer and self-taught Software developer 
-                    with a background in Manufacturing, Python development, Data Science and Web development. 
+                    with a background in Manufacturing, Python development and Web development. 
                     Excellent at collaborating in a multifunctional team environment to reach project goals and deliverables.
                     </p>
                   </div>
@@ -40,8 +40,8 @@ const About = () => {
               <div className="col-span-12 space-y-2.5">
                 <div className="lg:mr-16">
                   <p className="text-gray-lite  dark:text-color-910 leading-7">
-                    I am a creative, enthusiastic, and innovative Engineer and self-taught Software developer 
-                    with a background in Manufacturing, Python development, Data Science and Web development. 
+                  I am a creative, enthusiastic, and innovative Engineer and self-taught Software developer 
+                    with a background in Manufacturing, Python development and Web development. 
                     Excellent at collaborating in a multifunctional team environment to reach project goals and deliverables.
                   </p>
                 </div>

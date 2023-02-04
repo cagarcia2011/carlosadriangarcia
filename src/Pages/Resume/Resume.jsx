@@ -6,7 +6,7 @@ import ResumeCard from './ResumeCard'
 import { Footer, PageTitle } from '../../Share'
 
 const Resume = () => {
-    const { skillsArray } = UseData()
+    const { skillsArray, knowledges } = UseData()
   return (
     <>
       <PageTitle title="Resume"></PageTitle>
@@ -48,14 +48,11 @@ const Resume = () => {
                 {/* Knowledges items */}
 
                 <div className="flex gap-y-5 gap-x-2.5 flex-wrap">
-                  <button className="resume-btn">Web Development</button>
-                  <button className="resume-btn">Project Management</button>
-                  <button className="resume-btn">Git & GitHub</button>
-                  <button className="resume-btn">Linux</button>
-                  <button className="resume-btn">MS Power Platform Apps</button>
-                  <button className="resume-btn">Data Science</button>
-                  <button className="resume-btn">Debugging & Troubleshooting</button>
-
+                  {
+                    knowledges.map((knowledge, index) => (
+                      <button className="resume-btn" key={index}>{knowledge}</button>
+                    ))
+                  }
                 </div>
               </div>
 
