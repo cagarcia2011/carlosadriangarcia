@@ -152,16 +152,17 @@ const AllData = () => {
         {
             id: 2,
             date: "2022-In Progreess",
-            title: "Certification - Computer Science",
+            title: "Professional Certification - Computer Science",
             place: "Codecademy.com",
             color: "#EEF5FA"
         },
         {
             id: 3,
-            date: "2022-In Progress",
-            title: "Certification - Full-Stack Engineer",
-            place: "Codecademy.com",
-            color: "#EEF5FA"
+            date: "2022-2023",
+            title: "Professional Certification - Front-End Engineer",
+            place: "Codecademy",
+            color: "#EEF5FA",
+            link: "https://www.codecademy.com/profiles/CarlosAdrianGarcia/certificates/2682884a0719474f96407efe432fdd87"
         },
         {
             id: 1,

@@ -82,6 +82,22 @@ module.exports = {
       boxShadow: {
         icon: "0 4px 6px 0px rgba(0, 0, 0, 0.08)",
       },
+      animation: {
+        textFadeIn: 'textFadeIn 400ms ease-in',
+        textFadeOut: 'textFadeOut 400ms ease-in'
+      },
+      keyframes: {
+        textFadeIn: {
+          '0%': { opacity: '0%' },
+          '75%': { opacity: '0%' },
+          '100%': { opacity: '100%' }
+        },
+        textFadeOut: {
+          '0%': { opacity: '100%' },
+          '20%': { opacity: '0%' },
+          '100%': { opacity: '0%' }
+        },
+      }
     },
 
   },
