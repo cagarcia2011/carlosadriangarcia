@@ -23,7 +23,7 @@ const About = () => {
             <div className="lg:hidden">
               {/* Sidebar personal information for mobile devices */}
               <HomeCard />
-              <div className=" md:gap-10 mb-12 md:pt-[30px] items-center lg:hidden ">
+              <div className=" md:gap-10 mb-12 md:pt-[30px] items-center lg:hidden px-6">
                 <h2 className="after-effect after:left-52 mb-5">About Me</h2>
                 <div className="col-span-12 space-y-2.5">
                   <div className="lg:mr-16">

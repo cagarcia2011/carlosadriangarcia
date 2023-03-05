@@ -23,12 +23,11 @@ const Home = () => {
       <PageTitle title="Home"></PageTitle>
       {/* End pagetitle */}
 
-      <section className="bg-white dark:bg-black min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
-        <div
-          className="container   w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5  lg:px-0 lg:pt-[50px]"
+      <section className="z-[100] bg-white dark:bg-black min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
+        <div className="container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5  lg:px-0 lg:pt-[50px]"
           data-aos="fade"
         >
-          <div className="w-full flex justify-between  px-4">
+          <div className="w-full z-[1000] flex justify-between  px-4">
             {/* website logo */}
 
             <Link to="/">
@@ -73,14 +72,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <nav className={`${menuOpen ? "block lg:hidden" : "hidden"} transition-all duration-300 ease-in-out `}>
+        <nav className={`lg:hidden top-0 z-[100] w-full bg-primary-bg-light dark:bg-primary-bg-dark absolute ${menuOpen ? "opacity-100" : "translate-y-[-10rem] opacity-0"} transition-all duration-300 ease-in-out `}>
           {/* mobile menu items */}
-          <ul
-            className={`${
-              menuOpen
-                ? "block  rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-primary-bg-light dark:bg-primary-bg-dark transition-all duration-300 ease-in-out"
-                : "flex my-12 "
-            }`}
+          <ul className={`rounded-b-0 z-[100] block rounded-b-[20px] shadow-md absolute left-0 top-20 w-full bg-primary-bg-light dark:bg-primary-bg-dark transition-all duration-300 ease-in-out`}
           >
             {menuItems.map((item) => (
               <li onClick={() => setMenuOpen(false)} key={item.id}>
@@ -89,8 +83,8 @@ const Home = () => {
                   activeClassName="text-accent-color hover:text-variant-bg"
                   inactiveClassName="dark:text-white dark:hover:text-accent-color hover:text-accent-color  "
                   className={`${
-                    menuOpen ? " pl-4" : " mx-2.5 rounded-md "
-                  }    cursor-pointer  transition-colors duration-300 ease-in-out  font-poppins   text-gray-lite font-medium   flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  ${
+                    menuOpen ? "animate-textFadeIn pl-4" : "animate-textFadeOut mx-2.5 rounded-md"
+                  } cursor-pointer  transition-all duration-100 ease-in-out  font-poppins   text-gray-lite font-medium   flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  ${
                     a.pathname === "/" && item.id === "01"
                       ? " dark:text-accent-color text-accent-color   "
                       : ""
