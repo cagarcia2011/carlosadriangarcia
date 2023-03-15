@@ -9,7 +9,7 @@ import {
   FaGithubAlt,
 } from "react-icons/fa";
 
-import Resume from '../assets/resume/Carlos-Garcia-Resume-08-22.pdf'
+import Resume from '../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
 import dowloadIcon from '../assets/icons/download.png'
 import img from '../assets/about/avatar.png'
 

@@ -182,6 +182,14 @@ const AllData = () => {
             place: "Boston Scientific",
             location: "Spencer, Indiana, US",
             color: "#EEF5FA"
+        },
+        {
+            id: 2,
+            date: "2020-2021",
+            title: "Validation Engineer",
+            place: "FITS, LLC, Contract with Bristol-Myers Squibb",
+            location: "Manati, Puerto Rico, US",
+            color: "#EEF5FA"
         }
       ]
 
