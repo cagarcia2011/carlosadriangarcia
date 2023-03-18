@@ -7,10 +7,6 @@ import { CgNotes } from "react-icons/cg"
 // import { FiCodesandbox } from "react-icons/fi"
 import { RiContactsBookLine } from "react-icons/ri"
 
-import iconPhone from "../assets/contact/phone-call 1.png"
-import iconEmail from "../assets/contact/email 1.png"
-import iconMap from "../assets/contact/map 1.png"
-
 
 const AllData = () => {
     const [check, setCheck] = useState(false)
@@ -101,8 +97,14 @@ const AllData = () => {
         {
             id: 1,
             color: "#FF6464",
-            name: "Javascript",
+            name: "JavaScript",
             number: "90"
+        },
+        {
+            id: 9,
+            color: "#FF6464",
+            name: "TypeScript",
+            number: "75"
         },
         {
             id: 2,
@@ -196,7 +198,6 @@ const AllData = () => {
       const contactArray = [
         {
             id: 1,
-            icon: iconPhone,
             title: "Phone ",
             item1: "+1(812) 361-8052",
             item2: "+1(812) 361-8052",
@@ -204,7 +205,6 @@ const AllData = () => {
         },
         {
             id: 2,
-            icon: iconEmail,
             title: "Email ",
             item1: "ca.garcia2011@gmail.com",
             item2: "ca.garcia2011@gmail.com",
@@ -213,7 +213,6 @@ const AllData = () => {
         },
         {
             id: 3,
-            icon: iconMap,
             title: "Address ",
             item1: "Bloomington, Indiana, US",
             item2: "Bloomington, Indiana, US",
@@ -230,6 +229,7 @@ const AllData = () => {
         "MS Power Platform Apps",
         "Data Science",
         "Debugging & Troubleshooting",
+        "C# & .NET"
       ]
 
   return {
