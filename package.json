@@ -29,9 +29,9 @@
     "web-vitals": "^3.1.0"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
