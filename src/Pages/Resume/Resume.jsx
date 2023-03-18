@@ -4,6 +4,8 @@ import UseData from '../../Hooks/UseData'
 import LineItem from './LineItem'
 import ResumeCard from './ResumeCard'
 import { Footer, PageTitle } from '../../Share'
+import ResumeDoc from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
+import dowloadIcon from '../../assets/icons/download.png'
 
 const Resume = () => {
     const { skillsArray, knowledges } = UseData()
@@ -26,7 +28,7 @@ const Resume = () => {
           </div>
           {/* End .container */}
 
-          <div className="container bg-transparent dark:bg-[#0D0D0D] py-12 px-2 sm:px-5 md:px-10 lg:px-20">
+          <div className="container bg-transparent dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
             <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
               <div className="col-span-1">
                 <h4 className="text-5xl dark:text-white font-medium mb-6">
@@ -57,6 +59,16 @@ const Resume = () => {
               </div>
 
               {/* knowledge section end */}
+            </div>
+            <div className='w-full justify-center items-center'>
+                <a
+                href={ResumeDoc}
+                download
+                className="lg:hidden w-[75%] flex items-center justify-center mx-auto bg-gradient-to-r from-accent-color to-variant-bg duration-200 transition ease-linear hover:bg-gradient-to-l px-8 py-3 text-lg text-white rounded-[35px] mt-6"
+              >
+                <img src={dowloadIcon} alt="icon" className="mr-2" />
+                Download CV
+              </a>
             </div>
           </div>
           {/* End .container */}

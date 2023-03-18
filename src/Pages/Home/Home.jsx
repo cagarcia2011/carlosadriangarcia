@@ -72,7 +72,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <nav className={`lg:hidden top-0 z-[100] w-full bg-primary-bg-light dark:bg-primary-bg-dark absolute ${menuOpen ? "opacity-100" : "translate-y-[-10rem] opacity-0"} transition-all duration-300 ease-in-out `}>
+        <nav className={`lg:hidden top-0 z-[100] w-full bg-primary-bg-light dark:bg-primary-bg-dark absolute ${menuOpen ? "opacity-100" : "translate-y-[-30rem] opacity-0"} transition-all duration-300 ease-in-out `}>
           {/* mobile menu items */}
           <ul className={`rounded-b-0 z-[100] block rounded-b-[20px] shadow-md absolute left-0 top-20 w-full bg-primary-bg-light dark:bg-primary-bg-dark transition-all duration-300 ease-in-out`}
           >

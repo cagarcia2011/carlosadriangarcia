@@ -28,9 +28,8 @@ const About = () => {
                 <div className="col-span-12 space-y-2.5">
                   <div className="lg:mr-16">
                     <p className="text-gray-lite  dark:text-color-910 leading-7">
-                    I am a creative, enthusiastic, and innovative Engineer and self-taught Software developer 
-                    with a background in Manufacturing, Python development and Web development. 
-                    Excellent at collaborating in a multifunctional team environment to reach project goals and deliverables.
+                    I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br/><br/>
+                    My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
                     </p>
                   </div>
                 </div>
@@ -40,34 +39,14 @@ const About = () => {
               <div className="col-span-12 space-y-2.5">
                 <div className="lg:mr-16">
                   <p className="text-gray-lite  dark:text-color-910 leading-7">
-                  I am a creative, enthusiastic, and innovative Engineer and self-taught Software developer 
-                    with a background in Manufacturing, Python development and Web development. 
-                    Excellent at collaborating in a multifunctional team environment to reach project goals and deliverables.
+                    I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br/><br/>
+                    My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
                   </p>
                 </div>
               </div>
             </div>
           </div>
           {/* End about descriptions */}
-{/* 
-          <div className="  pb-12 px-2 sm:px-5 md:px-10 lg:px-14 ">
-            <h3 className="text-[35px] dark:text-white font-medium pb-5">
-              What I do!
-            </h3>
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 ">
-              {//Experience information 
-
-              {serviceArray.map((item) => (
-                <AboutCard key={Math.random()} item={item} local={local} />
-              ))} }
-            </div>
-          </div> */}
-          {/* service provide end */}
-
-          <div className="px-2 sm:px-5 md:px-10 lg:px-14 ">
-            {/* Slick Slider call here  */}
-            {/* <SliderCommon /> */}
-          </div>
 
           {/* Common Footer call here */}
           <Footer bg={"#FFFF"} />
