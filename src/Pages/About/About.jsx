@@ -28,8 +28,8 @@ const About = () => {
                 <div className="col-span-12 space-y-2.5">
                   <div className="lg:mr-16">
                     <p className="text-gray-lite  dark:text-color-910 leading-7">
-                    I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br/><br/>
-                    My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
+                      I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br/><br/>
+                      My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
                     </p>
                   </div>
                 </div>
