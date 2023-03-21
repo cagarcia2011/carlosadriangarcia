@@ -1,6 +1,6 @@
-import { Footer, PageTitle } from '../../share'
+import { Footer, PageTitle } from '../../components'
 import { HomeCard } from '../home/HomeCard';
-import '../../share/Styles.css'
+import '../../components/Styles.css'
 
 export const About = () => {
     // const { local } = UseData()

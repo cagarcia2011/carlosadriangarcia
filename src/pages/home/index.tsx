@@ -6,7 +6,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { HomeCard } from './HomeCard';
-import { PageTitle, Header, NavLink } from '../../share';
+import { PageTitle, Header, NavLink } from '../../components';
 
 import { useData } from '../../hooks'
 import logo from '../../assets/logo/logo.png'
@@ -41,14 +41,14 @@ export const Home = () => {
                   onClick={() => handle("dark")}
                   className="bg-white w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full flex justify-center items-center hover:bg-accent-color text-black hover:text-white transition-all duration-300 ease-in-out cursor-pointer  "
                 >
-                  <FiMoon className=" text-3xl " />
+                  <FiSun className=" text-3xl " />
                 </span>
               ) : (
                 <span
                   onClick={() => handle("light")}
                   className="bg-[#4D4D4D] w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full flex justify-center items-center hover:bg-accent-color transition-all duration-300 ease-in-out cursor-pointer  "
                 >
-                  <FiSun className="text-white text-3xl" />
+                  <FiMoon className="text-white text-3xl" />
                 </span>
               )}
 

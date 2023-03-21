@@ -1,7 +1,7 @@
 import { useData } from '../../hooks/useData'
 import { LineItem } from './LineItem'
 import { ResumeCard } from './ResumeCard'
-import { Footer, PageTitle } from '../../share'
+import { Footer, PageTitle } from '../../components'
 import ResumeDoc from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
 import dowloadIcon from '../../assets/icons/download.png'
 

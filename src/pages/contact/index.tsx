@@ -1,6 +1,6 @@
 import { ContactForm } from "./ContactForm";
 
-import { Footer, PageTitle } from '../../share';
+import { Footer, PageTitle } from '../../components';
 
 
 export const Contact = () => {
