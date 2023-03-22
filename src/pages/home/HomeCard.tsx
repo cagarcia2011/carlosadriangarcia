@@ -17,7 +17,7 @@ export const HomeCard = () => {
   return (
     <div>
       <div className="w-full mb-6 lg:mb-0  mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0 ">
-        <Avatar />
+        <Avatar absolute={true} width="260px" />
         {/* Social card */}
         <div className="pt-[100px] pb-8">
           <Greeting />

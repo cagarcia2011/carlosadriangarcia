@@ -1,24 +1,29 @@
 import { useData } from '../../hooks/useData'
 import { LineItem } from './LineItem'
 import { ResumeCard } from './ResumeCard'
-import { Footer, PageTitle } from '../../components'
+import { Avatar, Footer, PageTitle } from '../../components'
 import ResumeDoc from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
 import dowloadIcon from '../../assets/icons/download.png'
 import { useEffect } from 'react'
 
 export const Resume = () => {
-    const { skillsArray, knowledges, avatars, handleImageChange } = useData()
+  const { skillsArray, knowledges, avatars, handleImageChange } = useData()
 
-    useEffect(() => {
-      handleImageChange(false, avatars.coding)
-    }, [])
+  useEffect(() => {
+    handleImageChange(false, avatars.coding)
+  }, [])
   return (
     <>
       <PageTitle title="Resume"></PageTitle>
       {/* End pagetitle */}
 
       <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
-        <div>
+        <div className="relative w-full flex items-center justify-center">
+          <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
+            <Avatar absolute={false} width="260px" />
+          </div>
+        </div>
+        <div className='lg:mt-0 mt-[15rem]'>
           <div className="container sm:px-5 md:px-10 lg:px-14" data-aos="fade-up">
             <div className="py-12 px-4 md:px-0">
               {/*Resume page title */}
@@ -64,7 +69,7 @@ export const Resume = () => {
               {/* knowledge section end */}
             </div>
             <div className='w-full justify-center items-center' data-aos="fade-right">
-                <a
+              <a
                 href={ResumeDoc}
                 download
                 className="lg:hidden w-[75%] flex items-center justify-center mx-auto bg-gradient-to-r from-accent-color to-variant-bg duration-200 transition ease-linear hover:bg-gradient-to-l px-8 py-3 text-lg text-white rounded-[35px] mt-6"
