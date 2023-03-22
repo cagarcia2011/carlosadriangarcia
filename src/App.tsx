@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 1200 });
     AOS.refresh();
-
   }, [])
   return (
     <>

@@ -1,9 +1,15 @@
 import { Footer, PageTitle } from '../../components'
 import { HomeCard } from '../home/HomeCard';
 import '../../components/Styles.css'
+import { useData } from '../../hooks';
+import { useEffect } from 'react';
 
 export const About = () => {
+  const { avatars, handleImageChange} = useData()
 
+  useEffect(() => {
+    handleImageChange(false, avatars.idea)
+  }, [])
   return (
     <section>
       <PageTitle title="About"></PageTitle>

@@ -2,58 +2,60 @@ import { useRef } from 'react'
 import emailjs from "@emailjs/browser"
 import { toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import { useData } from '../../hooks'
 
 type ContactFormProps = {
-    condition: boolean
+  condition: boolean
 }
 
-export const ContactForm = ({ condition } : ContactFormProps) => {  
+export const ContactForm = ({ condition }: ContactFormProps) => {
   const form = useRef();
-    const sendEmail = (e : React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault()  
-      emailjs
-          .sendForm(
-            "service_mulczjc",
-            "template_wh4hgke",
-            form.current,
-            "HUV4r_gJoKFUBa6Cz"
-          )
-          .then(
-            (result) => {
-              toast.success("Message Sent successfully!", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              });
-              let myform : any;
-              myform = document.getElementById("myForm");
-              myform.reset();
-            },
-            (error) => {
-              toast.error("Ops Message not Sent!", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              });
-            }
-          );
-      };
-    return (
-        <div
+  const { handleImageChange, avatars } = useData()
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        "service_mulczjc",
+        "template_wh4hgke",
+        form.current,
+        "HUV4r_gJoKFUBa6Cz"
+      )
+      .then(
+        (result) => {
+          toast.success("Message Sent successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          handleImageChange(false, avatars.success)
+          let myform: any;
+          myform = document.getElementById("myForm");
+          myform.reset();
+        },
+        (error) => {
+          toast.error("Ops Message not Sent!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      );
+  };
+  return (
+    <div
       data-aos="fade"
-      className={`${
-        condition
-          ? "mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2"
-          : "  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px]  p-4  "
-      } bg-transparent border-accent-light border-2 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]`}
+      className={`${condition
+        ? "mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2"
+        : "  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px]  p-4  "
+        } bg-transparent border-accent-light border-2 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]`}
     >
       <h3 className="text-4xl  ">
         <span className="text-gray-lite dark:text-[#A6A6A6] ">
@@ -105,8 +107,8 @@ export const ContactForm = ({ condition } : ContactFormProps) => {
             placeholder=" "
             id="message"
             required
-            rows={3}          
-            ></textarea>
+            rows={3}
+          ></textarea>
           <label
             htmlFor="message"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-variant-bg peer-focus:dark:text-accborder-accent-color peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
@@ -126,5 +128,5 @@ export const ContactForm = ({ condition } : ContactFormProps) => {
         {/* ToastContainer use here */}
       </form>
     </div>
-    )
+  )
 }

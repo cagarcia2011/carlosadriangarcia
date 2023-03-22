@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from "react"
+import { useState, useEffect, ReactNode, useCallback } from "react"
 
 import { Link, useLocation } from "react-router-dom"
 
@@ -6,11 +6,18 @@ import { FaRegUser } from "react-icons/fa"
 import { CgNotes } from "react-icons/cg"
 import { RiContactsBookLine } from "react-icons/ri"
 
+import avatarIdea from '../assets/about/avatar-idea.png'
+import avatarCoding from '../assets/about/avatar-coding.png'
+import avatarFist from '../assets/about/avatar-fist.png'
+import avatarSuccess from '../assets/about/avatar-success.png'
+
 export type DataReturnType = ReturnType<typeof data>
 
 export const data = () => {
     const [check, setCheck] = useState(false)
     const [local, setLocal] = useState(localStorage.getItem("theme"))
+    const [currentImgSelection, setCurrentImgSelection] = useState(avatarIdea)
+
     useEffect(() => {
         const themeValue = localStorage?.getItem("theme");
 
@@ -41,6 +48,33 @@ export const data = () => {
             ? document.documentElement.classList.add("dark")
             : document.documentElement.classList.remove("dark")
     }
+
+    const avatars = {
+        idea: avatarIdea,
+        coding: avatarCoding,
+        fist: avatarFist,
+        success: avatarSuccess
+    }
+
+    const handleImageChange = useCallback((isRandom : boolean = true, selection : string = '') => {
+
+        if (isRandom) {
+            setCurrentImgSelection((prev) => {
+                const keyArray = Object.keys(avatars).filter(key => avatars[key] !== prev)
+                const randomKeyIdx = Math.floor(Math.random() * keyArray.length)
+                const randomKey = keyArray[randomKeyIdx]
+                return avatars[randomKey]
+              })
+              return;
+        }
+
+        if (selection) {
+            setCurrentImgSelection(selection)
+            return;
+        }
+
+    }, []
+) 
 
     const menuItems = [
         {
@@ -224,6 +258,9 @@ export const data = () => {
     experienceArray,
     contactArray,
     skillsArray,
-    knowledges
+    knowledges,
+    avatars,
+    handleImageChange,
+    currentImgSelection
   }
 }

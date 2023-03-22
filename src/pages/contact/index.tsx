@@ -1,9 +1,15 @@
 import { ContactForm } from "./ContactForm";
 
 import { Footer, PageTitle } from '../../components';
+import { useEffect } from "react";
+import { useData } from "../../hooks";
 
 
 export const Contact = () => {
+    const { avatars, handleImageChange} = useData()
+    useEffect(() => {
+        handleImageChange(false, avatars.fist)
+    }, [])
     return (
         <>
             <PageTitle title="Contact"/>

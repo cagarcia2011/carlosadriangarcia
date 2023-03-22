@@ -4,9 +4,14 @@ import { ResumeCard } from './ResumeCard'
 import { Footer, PageTitle } from '../../components'
 import ResumeDoc from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
 import dowloadIcon from '../../assets/icons/download.png'
+import { useEffect } from 'react'
 
 export const Resume = () => {
-    const { skillsArray, knowledges } = useData()
+    const { skillsArray, knowledges, avatars, handleImageChange } = useData()
+
+    useEffect(() => {
+      handleImageChange(false, avatars.coding)
+    }, [])
   return (
     <>
       <PageTitle title="Resume"></PageTitle>
