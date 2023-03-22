@@ -21,7 +21,7 @@ export function PersonalInformation() {
                             className="hover:text-accent-color duration-300 transition"
                             href="tel:+18123618052"
                         >
-                            +1 (812) 361 8052
+                            {import.meta.env.VITE_PHONE}
                         </a>
                     </p>
                 </div>
@@ -43,7 +43,7 @@ export function PersonalInformation() {
                             className="hover:text-accent-color duration-300 transition"
                             href="mailto:ca.garcia2011@gmail.com"
                             >
-                            ca.garcia2011@gmail.com
+                            {import.meta.env.VITE_EMAIL}
                         </a>
                     </p>
                 </div>
@@ -57,7 +57,7 @@ export function PersonalInformation() {
                     <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]">
                         Location
                     </p>
-                    <p className="dark:text-white break-all">Bloomington, Indiana, US</p>
+                    <p className="dark:text-white break-all">{import.meta.env.VITE_LOCATION}</p>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@ export function PersonalInformation() {
                     <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]">
                         Birthday
                     </p>
-                    <p className="dark:text-white break-all">July 12, 1996</p>
+                    <p className="dark:text-white break-all">{import.meta.env.VITE_BDAY}</p>
                 </div>
             </div>
         </div>
