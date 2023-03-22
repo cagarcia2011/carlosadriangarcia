@@ -19,8 +19,8 @@ export const Resume = () => {
 
       <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
         <div className="relative w-full flex items-center justify-center">
-          <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
-            <Avatar absolute={false} width="260px" />
+          <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-in">
+            <Avatar absolute={false} width="260px"/>
           </div>
         </div>
         <div className='lg:mt-0 mt-[15rem]'>
@@ -38,7 +38,7 @@ export const Resume = () => {
 
           <div className="container bg-transparent dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
             <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
-              <div className="col-span-1" data-aos="fade-right">
+              <div className="col-span-1" data-aos="fade-right" data-aos-mirror="false">
                 <h4 className="text-5xl dark:text-white font-medium mb-6">
                   Relevant Skills
                 </h4>
@@ -50,7 +50,7 @@ export const Resume = () => {
 
               {/* knowledge section start */}
 
-              <div className="col-span-1" data-aos="fade-left">
+              <div className="col-span-1" data-aos="fade-left" data-aos-mirror="false">
                 <h4 className="text-5xl dark:text-white font-medium mb-8">
                   Knowledges
                 </h4>
@@ -68,7 +68,7 @@ export const Resume = () => {
 
               {/* knowledge section end */}
             </div>
-            <div className='w-full justify-center items-center' data-aos="fade-right">
+            <div className='w-full justify-center items-center' data-aos="fade-right" data-aos-mirror="false">
               <a
                 href={ResumeDoc}
                 download

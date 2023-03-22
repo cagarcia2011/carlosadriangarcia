@@ -19,7 +19,23 @@ import {
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1200 });
-    AOS.refresh();
+    let timerId : any = null;
+    let listenerDidInit = true;
+    const refreshAos = () => {
+      timerId = setTimeout(() => {
+        AOS.refresh()
+      }, 1200)
+     }
+    if (document.readyState !== 'loading') {
+      refreshAos();
+      listenerDidInit = false
+    } else{
+      document.addEventListener("DOMContentLoaded", refreshAos) 
+    }
+    return () =>{
+      clearTimeout(timerId)
+      if (listenerDidInit) document.removeEventListener("DOMContentLoaded", refreshAos)
+    }
   }, [])
   return (
     <>
