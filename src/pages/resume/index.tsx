@@ -10,7 +10,7 @@ export const Resume = () => {
   const { skillsArray, knowledges, avatars, handleImageChange } = useData()
 
   useEffect(() => {
-    handleImageChange(false, avatars.coding)
+    handleImageChange(false, avatars.greatness)
   }, [])
   return (
     <>

@@ -10,6 +10,8 @@ import avatarIdea from '../assets/about/avatar-idea.png'
 import avatarCoding from '../assets/about/avatar-coding.png'
 import avatarFist from '../assets/about/avatar-fist.png'
 import avatarSuccess from '../assets/about/avatar-success.png'
+import avatarGreatness from '../assets/about/avatar-greatness.png'
+import { FiCodesandbox } from "react-icons/fi"
 
 export type DataReturnType = ReturnType<typeof data>
 
@@ -53,7 +55,8 @@ export const data = () => {
         idea: avatarIdea,
         coding: avatarCoding,
         fist: avatarFist,
-        success: avatarSuccess
+        success: avatarSuccess,
+        greatness: avatarGreatness
     }
 
     const handleImageChange = useCallback((isRandom : boolean = true, selection : string = '') => {
@@ -74,7 +77,9 @@ export const data = () => {
         }
 
     }, []
-) 
+)   
+
+    // Menu Items
 
     const menuItems = [
         {
@@ -85,16 +90,16 @@ export const data = () => {
         },
         {
           id: "02",
+          name: "Projects",
+          link: "/projects",
+          icon: <FiCodesandbox />,
+        },
+        {
+          id: "03",
           name: "Resume",
           link: "/resume",
           icon: <CgNotes />,
         },
-        // {
-        //   id: "03",
-        //   name: "Works",
-        //   link: "/works",
-        //   icon: <FiCodesandbox />,
-        // },
         //For Blog Implementation
         // {
         //   id: "04",
@@ -103,7 +108,7 @@ export const data = () => {
         //   icon: <FaBlogger />,
         // },
         {
-          id: "03",
+          id: "04",
           name: "Contact",
           link: "/contact",
           icon: <RiContactsBookLine />,
