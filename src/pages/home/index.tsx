@@ -1,23 +1,24 @@
 import { useState } from 'react'
 
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FiMoon, FiSun } from "react-icons/fi";
+import { BiMenuAltRight } from 'react-icons/bi'
+import { RiCloseFill } from 'react-icons/ri'
+import { FiMoon, FiSun } from "react-icons/fi"
 
 import { HomeCard } from './HomeCard';
-import { PageTitle, DesktopNav, NavLink } from '../../components';
+import { PageTitle, DesktopNav, NavLink } from '../../components'
 
 import { useData } from '../../hooks'
 import logo from '../../assets/logo/logo.png'
 
 export const Home = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const { handleTheme, check, menuItems } = useData();
-    const a = useLocation();
-    const handle = (e: string) => {
-        handleTheme(e);
-    };
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { handleTheme, check, menuItems } = useData();
+  const a = useLocation();
+  const handle = (e: string) => {
+    handleTheme(e);
+  };
   return (
     <>
       <PageTitle title="Home"></PageTitle>
@@ -55,16 +56,16 @@ export const Home = () => {
               {!menuOpen ? (
                 <span
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="lg:hidden bg-accent-color w-[40px] h-[40px] rounded-full flex justify-center items-center text-white dark:text-white text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
+                  className="lg:hidden bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
                 >
-                  <AiOutlineMenu />
+                  <BiMenuAltRight className='rounded-full' />
                 </span>
               ) : (
                 <span
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="lg:opacity-0 lg:invisible visible opacity-100  bg-accent-color w-[40px] h-[40px] rounded-full flex justify-center items-center text-white text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
+                  className="lg:opacity-0 lg:invisible visible opacity-100  bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
                 >
-                  <AiOutlineClose />
+                  <RiCloseFill className='rounded-full' />
                 </span>
               )}
             </div>
@@ -80,13 +81,11 @@ export const Home = () => {
                   key={item.id}
                   activeClassName="text-accent-color hover:text-variant-bg"
                   inactiveClassName="dark:text-white text-gray-lite dark:hover:text-accent-color hover:text-accent-color  "
-                  className={`${
-                    menuOpen ? "animate-textFadeIn pl-4" : "animate-textFadeOut mx-2.5 rounded-md"
-                  } cursor-pointer  transition-all duration-100 ease-in-out  font-poppins font-medium   flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  ${
-                    a.pathname === "/" && item.id === "01"
+                  className={`${menuOpen ? "animate-textFadeIn pl-4" : "animate-textFadeOut mx-2.5 rounded-md"
+                    } cursor-pointer  transition-all duration-100 ease-in-out  font-poppins font-medium   flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  ${a.pathname === "/" && item.id === "01"
                       ? " dark:text-accent-color text-accent-color   "
                       : ""
-                  }`}
+                    }`}
                   to={item?.link}
                 >
                   <span className="mr-2 text-xl">{item?.icon}</span>{" "}
@@ -102,7 +101,7 @@ export const Home = () => {
                 onClick={() => handle("dark")}
                 className="bg-white text-black hover:text-white w-[40px] hidden  h-[40px] rounded-full lg:flex justify-center items-center  hover:bg-accent-color transition-all duration-300 ease-in-out cursor-pointer "
               >
-                <FiMoon className=" text-3xl " />
+                <FiMoon className="text-3xl" />
               </span>
             ) : (
               <span

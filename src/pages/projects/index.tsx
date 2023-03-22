@@ -18,7 +18,7 @@ export function Projects() {
                     <Avatar absolute={false} width="260px" />
                 </div>
             </div>
-            <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-[100svh]'>
+            <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-[100svh] lg:h-auto'>
                 <span className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">
                     <SiConstruct3 className='animate-spin' />
                 </span>

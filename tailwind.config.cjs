@@ -88,7 +88,10 @@ module.exports = {
       },
       animation: {
         textFadeIn: 'textFadeIn 400ms ease-in',
-        textFadeOut: 'textFadeOut 400ms ease-in'
+        textFadeOut: 'textFadeOut 400ms ease-in',
+        wiggle: 'wiggle 1s ease infinite', 
+        'spin-slow': 'spin 6s linear infinite',
+        'ping-slow': 'ping 6s linear infinite',
       },
       keyframes: {
         textFadeIn: {
@@ -100,6 +103,10 @@ module.exports = {
           '0%': { opacity: '100%' },
           '20%': { opacity: '0%' },
           '100%': { opacity: '0%' }
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-1deg)' },
+          '50%': { transform: 'rotate(1deg)' },
         }
       }
     },

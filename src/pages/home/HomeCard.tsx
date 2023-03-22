@@ -9,7 +9,7 @@ import {
   FaGithubAlt,
 } from "react-icons/fa";
 
-import { SocialLinks, PersonalInformation, Greeting, Avatar } from "../../components"
+import { SocialLinks, PersonalInformation, Greeting, Avatar, TechStack } from "../../components"
 import { DownloadButton } from "../../components/buttons";
 import Resume from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
 
@@ -22,7 +22,10 @@ export const HomeCard = () => {
         <div className="pt-[100px] pb-8">
           <Greeting />
 
-          <SocialLinks />
+          <div className="flex flex-col gap-10 mt-4">
+            <TechStack />
+            <SocialLinks />
+          </div>
 
           {/* personal information */}
           <PersonalInformation />

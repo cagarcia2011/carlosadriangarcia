@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 
 export function SocialLinks() {
@@ -31,7 +31,7 @@ export function SocialLinks() {
               rel="noopener noreferrer"
             >
               <span className="socialbtn text-[#0072b1] ">
-                <FaGithubAlt />
+                <FaGithub />
               </span>
             </a>
           </div>
