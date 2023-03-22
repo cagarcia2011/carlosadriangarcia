@@ -1,4 +1,5 @@
 import { useData } from "../hooks";
+import { SocialLinks } from "./SocialLinks";
 
 export type FooterProps = {
     bg: string,
@@ -16,6 +17,7 @@ export const Footer = ({ bg, condition }) => {
             }`,
         }}
         className="overflow-hidden rounded-b-2xl"
+        data-aos="fade-up"
         >
         <p className="text-center py-6 text-gray-lite  dark:text-color-910 ">
             © 2023 All Rights Reserved by{" "}
@@ -29,6 +31,9 @@ export const Footer = ({ bg, condition }) => {
             </a>
             .
         </p>
+        <div className="pb-4">
+            <SocialLinks />
+        </div>
         </footer>
     )
 }

@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import AOS from "aos"
+import 'aos/dist/aos.css'
 
 import { ToastContainer } from "react-toastify"
 
@@ -16,8 +17,10 @@ import {
 
 function App() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     AOS.init({ duration: 1200 });
     AOS.refresh();
+
   }, [])
   return (
     <>

@@ -6,7 +6,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { HomeCard } from './HomeCard';
-import { PageTitle, Header, NavLink } from '../../components';
+import { PageTitle, DesktopNav, NavLink } from '../../components';
 
 import { useData } from '../../hooks'
 import logo from '../../assets/logo/logo.png'
@@ -24,10 +24,8 @@ export const Home = () => {
       {/* End pagetitle */}
 
       <section className="z-[100] bg-white dark:bg-black min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
-        <div className="container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5  lg:px-0 lg:pt-[50px]"
-          data-aos="fade"
-        >
-          <div className="w-full z-[1000] flex justify-between  px-4">
+        <div className="container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5  lg:px-0 lg:pt-[50px]">
+          <div className="w-full z-[1000] flex justify-between items-center px-4" data-aos="fade-down">
             {/* website logo */}
 
             <Link to="/">
@@ -117,14 +115,13 @@ export const Home = () => {
           </ul>
         </nav>
         <div className="container grid grid-cols-12 md:gap-10  justify-between lg:mt-[220px] ">
-          <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
-            {/* profile sidebar */}
+          <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44" data-aos="fade-right">
             <HomeCard />
           </div>
           <div className="col-span-12 lg:col-span-8  ">
             {/* header  */}
 
-            <Header />
+            <DesktopNav />
             <Outlet />
           </div>
         </div>

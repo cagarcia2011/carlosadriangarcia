@@ -36,6 +36,10 @@ module.exports = {
       "8xl": "6rem", // 40px
     },
     extend: {
+      dropShadow: {
+        'white': '0 0px 15px rgba(255, 255, 255, 0.25)',
+        'black': '0 0px 15px rgba(0, 0, 0, 0.25)'
+      },
       backgroundImage: {
         homeBg: "url('/src/assets/background/bg.jpg')",
         "homeBg-dark": "url('/src/assets/background/bg-dark.jpg')",
