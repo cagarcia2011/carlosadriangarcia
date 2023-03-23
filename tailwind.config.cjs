@@ -37,8 +37,8 @@ module.exports = {
     },
     extend: {
       dropShadow: {
-        'white': '0 0px 15px rgba(255, 255, 255, 0.25)',
-        'black': '0 0px 15px rgba(0, 0, 0, 0.25)'
+        'white': '0 0px 5px rgba(255, 255, 255, 0.15)',
+        'black': '0 0px 5px rgba(0, 0, 0, 0.15)'
       },
       backgroundImage: {
         homeBg: "url('/src/assets/background/bg.jpg')",
@@ -72,7 +72,6 @@ module.exports = {
         "color-820": "#8774FF",
         "color-830": "#FF75D8",
         "color-840": "#FF6786",
-        // dart-color
         "color-910": "#A6A6A6",
         "color-920": "#1D1D1D",
         "color-930": "#FF6464",
