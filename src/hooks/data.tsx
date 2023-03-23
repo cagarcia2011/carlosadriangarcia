@@ -244,14 +244,15 @@ export const data = () => {
       ]
 
       const knowledges = [
-        "Web Development",
+        "Web Design",
         "Project Management",
         "Git & GitHub",
         "Linux",
+        "Agile Devlopment & SCRUM",
+        "Debugging & Troubleshooting",
+        "C# & .NET",
         "MS Power Platform Apps",
         "Data Science",
-        "Debugging & Troubleshooting",
-        "C# & .NET"
       ]
 
   return {
