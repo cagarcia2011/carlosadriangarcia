@@ -19,7 +19,7 @@ export const Resume = () => {
 
       <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
         <div className="relative w-full flex items-center justify-center">
-          <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-in">
+          <div className="lg:hidden absolute z-10 top-[5rem] w-[260px]" data-aos="fade-in">
             <Avatar absolute={false} width="260px"/>
           </div>
         </div>
