@@ -19,12 +19,12 @@ export const Resume = () => {
 
       <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
         <div className="relative w-full flex items-center justify-center">
-          <div className="lg:hidden absolute z-10 top-[5rem] w-[260px]" data-aos="fade-in">
+          <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-in">
             <Avatar absolute={false} width="260px"/>
           </div>
         </div>
-        <div className='lg:mt-0 mt-[15rem]'>
-          <div className="container sm:px-5 md:px-10 lg:px-14" data-aos="fade-up">
+        <div className='lg:mt-0'>
+          <div className="container sm:px-5 md:px-10 lg:px-14 sm:mt-[15rem] lg:mt-0" data-aos="fade-up">
             <div className="py-12 px-4 md:px-0">
               {/*Resume page title */}
               <h2 className="after-effect after:left-44">Resume</h2>
