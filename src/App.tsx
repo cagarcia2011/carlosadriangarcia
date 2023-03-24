@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import AOS from "aos"
 import 'aos/dist/aos.css'
 
+
 import { ToastContainer } from "react-toastify"
 
 import { ContextProvider } from "./context"
@@ -16,8 +17,15 @@ import {
   Projects
 } from './pages';
 
+import ReactGA from 'react-ga'
+const TRACKING_ID = import.meta.env.VITE_GA_ID
+ReactGA.initialize(TRACKING_ID)
+
 function App() {
+
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
     AOS.init({ duration: 1200 });
     let timerId : any = null;
     let listenerDidInit = true;
@@ -37,6 +45,7 @@ function App() {
       if (listenerDidInit) document.removeEventListener("DOMContentLoaded", refreshAos)
     }
   }, [])
+
   return (
     <>
       <ContextProvider>
