@@ -17,14 +17,9 @@ import {
   Projects
 } from './pages';
 
-import ReactGA from 'react-ga'
-const TRACKING_ID = import.meta.env.VITE_GA_ID
-ReactGA.initialize(TRACKING_ID)
-
 function App() {
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
 
     AOS.init({ duration: 1200 });
     let timerId : any = null;
