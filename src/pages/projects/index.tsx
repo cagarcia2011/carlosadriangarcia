@@ -27,7 +27,7 @@ export function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[50rem]">
+        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[50rem] lg:h-auto">
             <div className="relative w-full flex items-center justify-center">
                 <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
                     <Avatar absolute={false} width="260px" />
