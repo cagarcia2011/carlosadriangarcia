@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-
       screens: {
         sm: "100%",
         md: "100%",
@@ -40,11 +39,6 @@ module.exports = {
         'white': '0 0px 5px rgba(255, 255, 255, 0.15)',
         'black': '0 0px 5px rgba(0, 0, 0, 0.15)'
       },
-      backgroundImage: {
-        homeBg: "url('/src/assets/background/bg.jpg')",
-        "homeBg-dark": "url('/src/assets/background/bg-dark.jpg')",
-        "homeTwoBg-dark": "url('/src/assets/background/bgtwo.jpg')"
-      },
       colors: {
         'primary-bg-dark': '#2b2b2b',
         'primary-bg-light': '#F3F6F6',
@@ -58,7 +52,6 @@ module.exports = {
         "gray-lite": "#44566C",
         oriange: "#E93B81",
         green: "#6AB5B9",
-        "oriange-lite": "#FD7590",
         "color-50": "#C17CEB",
         "color-100": "#FCF4FF",
         "color-200": "#D566FF",

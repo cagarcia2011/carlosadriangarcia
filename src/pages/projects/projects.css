@@ -1,0 +1,32 @@
+.slick-slide {
+    padding: 30px 60px;
+    align-items: center;
+  }
+  .slick-track {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .swiper-container {
+    width: 480px;
+  }
+
+  .slick-dots li button::before {
+    color: #56b0bc !important;
+    opacity: 0.25;
+  }
+  .slick-dots li.slick-active button::before {
+    color: #56b0bc !important;
+    opacity: 0.75;
+  }
+
+  .slick-next::before,
+  .slick-prev::before {
+    color: #56b0bc;
+    opacity: 0.5;
+  }
+
+  .slick-next::before:hover,
+  .slick-prev::before:hover {
+    opacity: 1;
+  }

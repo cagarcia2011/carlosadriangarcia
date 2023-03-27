@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import AOS from "aos"
 import 'aos/dist/aos.css'
 
-
 import { ToastContainer } from "react-toastify"
 
 import { ContextProvider } from "./context"
