@@ -14,7 +14,7 @@ export const Contact = () => {
     return (
         <>
             <PageTitle title="Contact"/>
-            <section id="contact">
+            <section id="contact" className="mb-[2rem]">
                 <div className="relative w-full flex items-center justify-center">
                     <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
                         <Avatar absolute={false} width="260px"/>

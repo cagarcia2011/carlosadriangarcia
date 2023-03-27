@@ -100,13 +100,6 @@ export const data = () => {
           link: "/resume",
           icon: <CgNotes />,
         },
-        //For Blog Implementation
-        // {
-        //   id: "04",
-        //   name: "Blogs",
-        //   link: "/home/blogs",
-        //   icon: <FaBlogger />,
-        // },
         {
           id: "04",
           name: "Contact",
