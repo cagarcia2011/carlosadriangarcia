@@ -38,18 +38,18 @@ html {
 }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
-  body::-webkit-scrollbar {
+  body::-webkit-scrollbar, .scroll-bar::-webkit-scrollbar {
     display: fixed;
     background-color: #2b2b2b;
     width: 5px;
   }
 
-  body::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb, .scroll-bar::-webkit-scrollbar-thumb{
     background-color: #4d4d4d;
   }
   
   /* Hide scrollbar for IE, Edge and Firefox */
-  body {
+  body, .scroll-bar {
     -ms-overflow-style: none; 
     scrollbar-width: none;
   }

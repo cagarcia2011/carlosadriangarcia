@@ -27,13 +27,13 @@ export function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="bg-white lg:rounded-2xl dark:bg-[#111111]">
+        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[50rem]">
             <div className="relative w-full flex items-center justify-center">
                 <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
                     <Avatar absolute={false} width="260px" />
                 </div>
             </div>
-            <div className='relative top-[300px] mb-[2rem] px-[2rem] lg:top-0 lg:mb-0 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[35rem]'>
+            <div id="projects-carousel" className='relative top-[300px] pb-[2rem] px-[2rem] lg:top-0 lg:mb-0 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[35rem]'>
                 <Slider {...settings}>
                     <div className='lg:h-[32rem]'>
                         <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-full'>
