@@ -1,17 +1,17 @@
-import { SiConstruct3 } from 'react-icons/si'
 import { useData } from '../../hooks'
 import { useEffect } from 'react'
-import { Avatar } from '../../components'
+import { Avatar, Footer, PageTitle } from '../../components'
 
 
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './projects.css'
+import { ProjectCard } from './ProjectCard'
 
 export function Projects() {
 
-    const { avatars, handleImageChange } = useData()
+    const { avatars, handleImageChange, projectsArray } = useData()
 
     const settings = {
         dots: true,
@@ -27,39 +27,31 @@ export function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[50rem] lg:h-auto">
+        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[58rem] lg:h-auto lg:mb-6 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
+            <PageTitle title={"Projects"}/>
             <div className="relative w-full flex items-center justify-center">
-                <div className="lg:hidden absolute z-10 top-[10rem] w-[260px]" data-aos="fade-right">
-                    <Avatar absolute={false} width="260px" />
+                <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]" data-aos="fade-right">
+                    <Avatar absolute={false} width="200px" />
                 </div>
             </div>
-            <div id="projects-carousel" className='relative top-[300px] pb-[2rem] px-[2rem] lg:top-0 lg:mb-0 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[35rem]'>
+            <div data-aos="fade-left" className='hidden lg:block pt-12 md:pt-12 md:px-10 lg:px-14'>
+                <h2 className='after-effect after:left-44 lg:block hidden'>Projects</h2>
+            </div>
+            <div id="projects-carousel" className='relative top-[250px] pb-[2rem] px-[2rem] lg:top-0 lg:mb-10 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[30rem]'>
+                <h2 className='lg:hidden after-effect after:left-48'>Projects</h2>
                 <Slider {...settings}>
-                    <div className='lg:h-[32rem]'>
-                        <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-full'>
-                            <span className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">
-                                <SiConstruct3 className='animate-spin' />
-                            </span>
-                            <p className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">Coming Soon...</p>
-                        </div>
-                    </div>
-                    <div className='lg:h-[32rem]'>
-                        <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-full'>
-                            <span className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">
-                                <SiConstruct3 className='animate-spin' />
-                            </span>
-                            <p className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">Still not here...</p>
-                        </div>
-                    </div>
-                    <div className='lg:h-[32rem]'>
-                        <div data-aos="fade-up" className='flex flex-row justify-center items-center gap-4 py-[10rem] h-full'>
-                            <span className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">
-                                <SiConstruct3 className='animate-spin' />
-                            </span>
-                            <p className="text-gray-lite  dark:text-color-910 leading-7 text-6xl">Still...</p>
-                        </div>
-                    </div>
+                    {
+                        projectsArray.map(project => (
+                            <ProjectCard key={`${project.id}-${project.title}`} {...project}/>
+                        ))
+                    }
                 </Slider>
+                <div className='relative block top-[2rem] lg:hidden'>
+                    <Footer />
+                </div>
+            </div>
+            <div className='hidden lg:block'>
+                <Footer />
             </div>
         </section>
     )

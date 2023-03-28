@@ -1,6 +1,6 @@
 import { IconType } from "react-icons"
 
-type TechIconProps = {
+export type TechIconProps = {
     IconElement: IconType,
     tooltip: string,
     animation?: string | null,

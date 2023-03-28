@@ -47,6 +47,8 @@ module.exports = {
         "accent-color": "#56b0bc",
         "accent-light": "#EEF5FA",
         "color-light": "#c7d4ee",
+        "shadow-light": 'rgba(255, 255, 255, 0.15)',
+        "shadow-dark": 'rgba(0, 0, 0, 0.15)',
         transparent: 'transparent',
         gray: "#F3F6F6",
         "gray-lite": "#44566C",

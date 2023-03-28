@@ -1,22 +1,10 @@
-import { useData } from "../hooks";
 import { SocialLinks } from "./SocialLinks";
 
-export type FooterProps = {
-    bg: string,
-    condition: boolean
-}
-
-export const Footer = ({ bg, condition }) => {
-    const { local } = useData()
+export const Footer = () => {
 
     return (
         <footer
-        style={{
-            background: `${
-            local === "light" ? bg : condition ? "#212425" : "transparent"
-            }`,
-        }}
-        className="overflow-hidden rounded-b-2xl"
+        className="overflow-hidden rounded-b-2xl bg-transparent border-t-2 border-t-accent-light dark:border-t-[#212425]"
         data-aos="fade-up"
         >
         <p className="text-center py-6 text-gray-lite  dark:text-color-910 ">
