@@ -7,7 +7,7 @@ import { RiCloseFill } from 'react-icons/ri'
 import { FiMoon, FiSun } from "react-icons/fi"
 
 import { HomeCard } from './HomeCard';
-import { PageTitle, DesktopNav, NavLink, PrivacyPolicy } from '../../components'
+import { PageTitle, DesktopNav, NavLink, PrivacyPolicy, SocialLinks } from '../../components'
 
 import { useData } from '../../hooks'
 import logo from '../../assets/logo/logo.png'
@@ -36,17 +36,15 @@ export const Home = () => {
       <PageTitle title="Home"></PageTitle>
       {/* End pagetitle */}
 
-      <section className="z-[100] bg-white dark:bg-black min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed w-full">
+      <section className="z-[100] bg-white dark:bg-black min-h-screen bg-no-repeat bg-center bg-cover bg-fixed w-full">
         <div className={`container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[35px]`}>
           <div className={`w-full z-[1000] flex justify-between items-center px-4`} data-aos="fade-down">
             {/* website logo */}
-
             <Link to="/">
               <img className="h-[26px] lg:h-[32px] rounded-md hover:scale-[105%] transition-all duration-50 ease-in-out" src={logo} alt="logo" />
             </Link>
             <div className="flex items-center">
               {/* dark and light mode button */}
-
               {check ? (
                 <span
                   onClick={() => handle("dark")}
@@ -138,12 +136,15 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <div data-aos="fade-up" className='socialSm:fixed hidden socialSm:flex flex-col items-center bg-transparent button-vertical-after after:h-40 after:translate-y-[7rem] bottom-0 left-0 w-[10%] h-[25%]'>
+        <SocialLinks />
+      </div>
       <PrivacyPolicy />
       <CookieConsent
         location="bottom"
         buttonText="I understand"
         style={{ background: local === "dark" ? "#111111" : "#f3f6f6" }}
-        buttonStyle={{ color: local === "dark" ? "#a6a6a6" : "#44566c", background: local === "dark" ? "#212425" : "#22b8cf", borderRadius: "5px"}}
+        buttonStyle={{ color: local === "dark" ? "#a6a6a6" : "#44566c", background: local === "dark" ? "#212425" : "#22b8cf", borderRadius: "5px" }}
         expires={150}>
         <p className='text-gray-lite dark:text-color-910 leading-2 lg:leading-6 text-xs'>
           <span className='hidden lg:inline'>This website uses cookies to track activity, such as the number of visitors, the pages they visit, and the time they spend on each page. This information is collected in an anonymous form and cannot be used to personally identify you.{" "}</span>

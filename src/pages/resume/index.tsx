@@ -17,7 +17,7 @@ export const Resume = () => {
       <PageTitle title="Resume"></PageTitle>
       {/* End pagetitle */}
 
-      <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
+      <section className="bg-white overflow-hidden lg:mb-20 lg:rounded-2xl dark:bg-[#111111]">
         <div className="relative w-full flex items-center justify-center">
           <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]" data-aos="fade-in">
             <Avatar absolute={false} width="200px"/>
@@ -80,8 +80,9 @@ export const Resume = () => {
             </div>
           </div>
           {/* End .container */}
-
-          <Footer />
+          <div className='pb-20'>
+            <Footer />
+          </div>
         </div>
       </section>
     </>

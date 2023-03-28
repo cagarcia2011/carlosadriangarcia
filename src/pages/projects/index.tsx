@@ -27,7 +27,7 @@ export function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[66rem] lg:h-auto lg:mb-6 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
+        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[66rem] lg:h-auto lg:mb-20 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
             <PageTitle title={"Projects"}/>
             <div className="relative w-full flex items-center justify-center">
                 <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]" data-aos="fade-right">

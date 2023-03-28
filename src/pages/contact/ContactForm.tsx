@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser"
 import { toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 import { useData } from '../../hooks'
+import { SocialLinks } from '../../components'
 
 type ContactFormProps = {
   condition: boolean
@@ -57,6 +58,9 @@ export const ContactForm = ({ condition }: ContactFormProps) => {
         : "  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px]  p-4  "
         } bg-transparent border-accent-light border-2 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]`}
     >
+      <div data-aos="fade-right" className='w-full flex items-center justify-start my-10 socialSm:hidden button-horizontal-after after:w-40 after:left-[7rem]'>
+        <SocialLinks />
+      </div>
       <h3 className="text-4xl  ">
         <span className="text-gray-lite dark:text-[#A6A6A6] ">
           I'm always open to discussing oportunities

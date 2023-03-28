@@ -35,6 +35,9 @@ module.exports = {
       "8xl": "6rem", // 40px
     },
     extend: {
+      screens: {
+        'socialSm': "1480px",
+      },
       dropShadow: {
         'white': '0 0px 5px rgba(255, 255, 255, 0.15)',
         'black': '0 0px 5px rgba(0, 0, 0, 0.15)'

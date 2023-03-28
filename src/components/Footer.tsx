@@ -34,9 +34,7 @@ export const Footer = () => {
                 Privacy Policy
             </a>
         </p>
-        <div className="pb-4">
-            <SocialLinks />
-        </div>
+
         </footer>
     )
 }

@@ -4,7 +4,7 @@ import { useData } from '../../hooks';
 import { useEffect } from 'react';
 
 export const About = () => {
-  const { avatars, handleImageChange} = useData()
+  const { avatars, handleImageChange } = useData()
 
   useEffect(() => {
     handleImageChange(false, avatars.idea)
@@ -52,7 +52,9 @@ export const About = () => {
           {/* End about descriptions */}
 
           {/* Common Footer call here */}
-          <Footer />
+          <div className='pb-10'>
+            <Footer />
+          </div>
         </div>
       </div>
     </section>
