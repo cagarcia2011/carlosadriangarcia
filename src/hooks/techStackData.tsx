@@ -1,5 +1,5 @@
 import { FaCss3Alt, FaHtml5, FaPython, FaReact } from "react-icons/fa";
-import { SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiDotnet, SiRedux, SiTailwindcss, SiTypescript, SiMongodb, SiPostgresql, SiNodedotjs } from "react-icons/si";
 
 export type TechStackDataReturnType = ReturnType<typeof techStackData>
 
@@ -54,13 +54,34 @@ export function techStackData() {
             animation: "animate-spin-slow",
             color: "#3573a5"
         },
-        //dotnet: {
-        //     id: 8,
-        //     Icon: SiDotnet,
-        //     tooltip: ".NET",
-        //     animation: null,
-        //     color: "#934b8e"
-        // },
+        dotnet: {
+            id: 8,
+            Icon: SiDotnet,
+            tooltip: ".NET",
+            animation: null,
+            color: "#934b8e"
+        },
+        mongoDB: {
+            id: 9,
+            Icon: SiMongodb,
+            tooltip: "MongoDB",
+            animation: null,
+            color: "#4ded64"
+        },
+        postgreSQL: {
+            id: 10,
+            Icon: SiPostgresql,
+            tooltip: "PostgreSQL",
+            animation: null,
+            color: "#336791"
+        },
+        nodeJS: {
+            id: 11,
+            Icon: SiNodedotjs,
+            tooltip: "Node.JS",
+            animation: null,
+            color: "#589450"
+        }
     }   
 
     return {

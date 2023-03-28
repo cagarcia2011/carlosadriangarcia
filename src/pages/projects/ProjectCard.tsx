@@ -1,5 +1,7 @@
 import { IconType } from "react-icons"
+import { BsArrowRightShort, BsCodeSlash } from 'react-icons/bs'
 import { TechIcon } from "../../components"
+import { ProjectButton } from "./ProjectButton"
 
 export type TechIconType = {
     id: number
@@ -21,7 +23,7 @@ export interface ProjectCardProps {
 export function ProjectCard({ title, description, image, pageLink, codeLink, icons }: ProjectCardProps) {
 
     return (
-        <div className="lg:h-[25rem] lg:mb-[2rem]">
+        <div className="lg:h-[30rem] lg:mb-[2rem]">
             <div className='flex flex-col items-center h-full gap-2'>
                 <a href={pageLink} target="_blank" className="cursor-pointer w-fit mb-2 rounded-2xl shadow-md shadow-shadow-dark dark:shadow-shadow-light overflow-hidden hover:scale-105 hover:shadow-lg transition-all duration-200 ease-in-out">
                     <img src={image} className="object-fill" />
@@ -34,6 +36,12 @@ export function ProjectCard({ title, description, image, pageLink, codeLink, ico
                             icons.map(tech => (
                                 <TechIcon key={`${tech.id}-${tech.tooltip}`} IconElement={tech.Icon} tooltip={tech.tooltip} animation={tech.animation} color={tech.color} />
                             ))
+                        }
+                    </div>
+                    <div className="mt-5 w-full lg:w-auto flex flex-col justify-start items-start lg:flex-row gap-2 lg:gap-4">
+                        <ProjectButton link={pageLink} Icon={BsArrowRightShort}>View Page</ProjectButton>
+                        {
+                            codeLink !== "" && <ProjectButton link={codeLink} Icon={BsCodeSlash} iconSize="1rem">View Source</ProjectButton>
                         }
                     </div>
                 </div>

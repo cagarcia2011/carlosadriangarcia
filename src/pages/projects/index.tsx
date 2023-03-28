@@ -27,7 +27,7 @@ export function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[58rem] lg:h-auto lg:mb-6 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
+        <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[66rem] lg:h-auto lg:mb-6 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
             <PageTitle title={"Projects"}/>
             <div className="relative w-full flex items-center justify-center">
                 <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]" data-aos="fade-right">
@@ -37,7 +37,7 @@ export function Projects() {
             <div data-aos="fade-left" className='hidden lg:block pt-12 md:pt-12 md:px-10 lg:px-14'>
                 <h2 className='after-effect after:left-44 lg:block hidden'>Projects</h2>
             </div>
-            <div id="projects-carousel" className='relative top-[250px] pb-[2rem] px-[2rem] lg:top-0 lg:mb-10 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[30rem]'>
+            <div data-aos="fade-up" id="projects-carousel" className='relative top-[250px] pb-[2rem] px-[2rem] lg:top-0 lg:mb-10 lg:px-0 dark:bg-[#111111] lg:rounded-2xl lg:h-[35rem]'>
                 <h2 className='lg:hidden after-effect after:left-48'>Projects</h2>
                 <Slider {...settings}>
                     {
