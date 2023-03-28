@@ -19,6 +19,7 @@ export const data = () => {
     const [check, setCheck] = useState(false)
     const [local, setLocal] = useState(localStorage.getItem("theme"))
     const [currentImgSelection, setCurrentImgSelection] = useState(avatarIdea)
+    const [privacyPolicyIsOpen, setPrivacyPolicyIsOpen] = useState(false)
 
     useEffect(() => {
         const themeValue = localStorage?.getItem("theme");
@@ -260,6 +261,8 @@ export const data = () => {
     knowledges,
     avatars,
     handleImageChange,
-    currentImgSelection
+    currentImgSelection,
+    privacyPolicyIsOpen,
+    setPrivacyPolicyIsOpen
   }
 }

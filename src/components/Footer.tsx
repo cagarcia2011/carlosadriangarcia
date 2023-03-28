@@ -1,6 +1,14 @@
+import { useData } from "../hooks";
 import { SocialLinks } from "./SocialLinks";
 
 export const Footer = () => {
+
+    const { setPrivacyPolicyIsOpen } = useData()
+
+    const openPrivacyPolicy = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault()
+        setPrivacyPolicyIsOpen(true)
+    }
 
     return (
         <footer
@@ -18,6 +26,13 @@ export const Footer = () => {
             Carlos Adrian Garcia
             </a>
             .
+            | {" "}
+            <a
+                className="text-gray-lite dark:text-gray hover:text-accent-color dark:hover:text-accent-color transition-all duration-300 ease-in-out cursor-pointer"
+                onClick={openPrivacyPolicy}
+                >
+                Privacy Policy
+            </a>
         </p>
         <div className="pb-4">
             <SocialLinks />

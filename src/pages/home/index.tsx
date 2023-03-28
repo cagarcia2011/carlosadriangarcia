@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
@@ -7,26 +7,38 @@ import { RiCloseFill } from 'react-icons/ri'
 import { FiMoon, FiSun } from "react-icons/fi"
 
 import { HomeCard } from './HomeCard';
-import { PageTitle, DesktopNav, NavLink } from '../../components'
+import { PageTitle, DesktopNav, NavLink, PrivacyPolicy } from '../../components'
 
 import { useData } from '../../hooks'
 import logo from '../../assets/logo/logo.png'
+import CookieConsent from 'react-cookie-consent'
 
 export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { handleTheme, check, menuItems } = useData();
+  const { handleTheme, check, menuItems, setPrivacyPolicyIsOpen, local } = useData();
   const a = useLocation();
   const handle = (e: string) => {
     handleTheme(e);
   };
+
+  const openPrivacyPolicy = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    setPrivacyPolicyIsOpen(true)
+  }
+
+  useEffect(() => {
+    if (menuOpen) {
+      setPrivacyPolicyIsOpen(false)
+    }
+  }, [menuOpen])
   return (
-    <main>
+    <main className={`relative`}>
       <PageTitle title="Home"></PageTitle>
       {/* End pagetitle */}
 
       <section className="z-[100] bg-white dark:bg-black min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed w-full">
-        <div className="container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[35px]">
-          <div className="w-full z-[1000] flex justify-between items-center px-4" data-aos="fade-down">
+        <div className={`container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[35px]`}>
+          <div className={`w-full z-[1000] flex justify-between items-center px-4`} data-aos="fade-down">
             {/* website logo */}
 
             <Link to="/">
@@ -56,14 +68,14 @@ export const Home = () => {
               {!menuOpen ? (
                 <span
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="lg:hidden bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
+                  className="lg:hidden hover:text-accent-color dark:hover:text-accent-color bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
                 >
                   <BiMenuAltRight className='rounded-full' />
                 </span>
               ) : (
                 <span
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="lg:opacity-0 lg:invisible visible opacity-100  bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
+                  className="lg:opacity-0 hover:text-accent-color dark:hover:text-accent-color lg:invisible visible opacity-100  bg-primary-bg-light w-[40px] h-[40px] rounded-full flex justify-center items-center text-gray-lite dark:text-white dark:bg-primary-bg-dark text-3xl ml-3 cursor-pointer transition-all duration-300 ease-in-out "
                 >
                   <RiCloseFill className='rounded-full' />
                 </span>
@@ -126,6 +138,24 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <PrivacyPolicy />
+      <CookieConsent
+        location="bottom"
+        buttonText="I understand"
+        style={{ background: local === "dark" ? "#111111" : "#f3f6f6" }}
+        buttonStyle={{ color: local === "dark" ? "#a6a6a6" : "#44566c", background: local === "dark" ? "#212425" : "#22b8cf", borderRadius: "5px"}}
+        expires={150}>
+        <p className='text-gray-lite dark:text-color-910 leading-2 lg:leading-6 text-xs'>
+          <span className='hidden lg:inline'>This website uses cookies to track activity, such as the number of visitors, the pages they visit, and the time they spend on each page. This information is collected in an anonymous form and cannot be used to personally identify you.{" "}</span>
+          By using this website, you consent to the use of cookies for the purposes of Google Analytics as described in the{" "}
+          <a
+            className="text-accent-color dark:text-accent-color hover:text-gray-lite dark:hover:text-accent-light transition-all duration-300 ease-in-out cursor-pointer"
+            onClick={openPrivacyPolicy}
+          >
+            Privacy Policy
+          </a>.
+        </p>
+      </CookieConsent>
     </main>
   )
 }
