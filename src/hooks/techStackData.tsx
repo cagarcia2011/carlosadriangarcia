@@ -1,10 +1,17 @@
 import { FaCss3Alt, FaHtml5, FaPython, FaReact } from "react-icons/fa";
-import { SiDotnet, SiRedux, SiTailwindcss, SiTypescript, SiMongodb, SiPostgresql, SiNodedotjs } from "react-icons/si";
+import { SiDotnet, SiRedux, SiTailwindcss, SiTypescript, SiMongodb, SiPostgresql, SiNodedotjs, SiJavascript } from "react-icons/si";
 
 export type TechStackDataReturnType = ReturnType<typeof techStackData>
 
 export function techStackData() {
     const techStack = {
+        javascript: {
+            id: 12,
+            Icon: SiJavascript,
+            tooltip: "JavaScript",
+            animation: null,
+            color: "#efd819"
+        },
         react: {
             id: 1,
             Icon: FaReact,
@@ -81,7 +88,7 @@ export function techStackData() {
             tooltip: "Node.JS",
             animation: null,
             color: "#589450"
-        }
+        },
     }   
 
     return {
