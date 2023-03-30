@@ -3,6 +3,20 @@ import { HomeCard } from '../home/HomeCard';
 import { useData } from '../../hooks';
 import { useEffect } from 'react';
 
+const AboutMeParagraph = () => {
+
+  return (
+    <p className="text-gray-lite  dark:text-color-910 leading-7">
+      I'm a highly skilled Software Engineer specializing in Front-End Development.
+      With a passion for creating intuitive and visually stunning user interfaces, I strive to deliver engaging and seamless user experiences.
+      <br /><br />With a strong foundation in HTML, CSS, JavaScript, and various front-end frameworks, I am adept at building scalable, responsive, cross-browser-compatible web applications.
+      My strong problem-solving abilities, attention to detail, and ability to work collaboratively make me a valuable asset to any team.
+      <br /><br />
+      I'm always eager to learn new technologies and hone my skills to build more innovative user interfaces. When I'm not coding, you can find me on the basketball court, cheering on my favorite teams, or catching up on the latest sports news. And let's not forget my love for coffee; there's nothing quite like the aroma of freshly brewed coffee to kickstart my day and get those creative juices flowing.
+    </p>
+  )
+}
+
 export const About = () => {
   const { avatars, handleImageChange } = useData()
 
@@ -30,10 +44,7 @@ export const About = () => {
                 <h2 className="after-effect after:left-52 mb-5">About Me</h2>
                 <div className="col-span-12 space-y-2.5">
                   <div className="lg:mr-16">
-                    <p className="text-gray-lite  dark:text-color-910 leading-7">
-                      I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br /><br />
-                      My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
-                    </p>
+                    <AboutMeParagraph />
                   </div>
                 </div>
               </div>
@@ -41,10 +52,7 @@ export const About = () => {
             <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden " data-aos="fade-up">
               <div className="col-span-12 space-y-2.5">
                 <div className="lg:mr-16">
-                  <p className="text-gray-lite  dark:text-color-910 leading-7">
-                    I am a creative, innovative, task-driven professional with a diverse Engineering background. My curiosity in technology and my drive to learn sparked a passion in Software Development. <br /><br />
-                    My diverse experience in Manufacturing, Validation and Projects gives me the ability to adapt quickly and confidently.
-                  </p>
+                  <AboutMeParagraph />
                 </div>
               </div>
             </div>
