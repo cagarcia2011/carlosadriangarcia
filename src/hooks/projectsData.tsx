@@ -15,7 +15,7 @@ export function projectsData() {
         {
             id: 1,
             title: "BrokerAuto Webpage",
-            description: "BrokerAuto Company Webpage that features a virtual advisor that assists customers that are looking to buy a car. This project showcases my ability to deliver a functional Web App to a real company.",
+            description: "BrokerAuto Company Webpage that features a virtual advisor that assists customers that are looking to buy a car. This a project is in Beta.",
             pageLink: "https://test-brokerauto.netlify.app/",
             codeLink: "",
             image: BrokerAutoPage,
@@ -28,7 +28,7 @@ export function projectsData() {
         {
             id: 2,
             title: "Apple Store Concept UI Design",
-            description: "Concept design for an Apple product landing page. This project showcases my UI design and Front-End skills to create a beautiful, responsive and interactive web app.",
+            description: "Concept design for an Apple product landing page. This project showcases my UI design and Front-End skills to create a beautiful, responsive and interactive Webpage.",
             pageLink: "https://apple-concept.netlify.app/",
             codeLink: "https://github.com/cagarcia2011/apple-landing-page-concept#apple-concept-landing-page",
             image: AppleConceptDesign,
