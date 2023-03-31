@@ -24,10 +24,10 @@ export const Resume = () => {
           </div>
         </div>
         <div className=''>
-          <div className="container sm:px-5 md:px-10 lg:px-14" data-aos="fade-up">
+          <div className="container sm:px-5 md:px-10 lg:px-14">
             <div className="py-12 px-4 md:px-0">
               {/*Resume page title */}
-              <h2 className="after-effect after:left-44 mt-[12rem] lg:mt-0">Resume</h2>
+              <h2 data-aos="fade-left" className="after-effect after:left-44 mt-[12rem] lg:mt-0">Resume</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px]">
                 {/* resume items map */}
                 <ResumeCard />
@@ -38,7 +38,7 @@ export const Resume = () => {
 
           <div className="container bg-transparent dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
             <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
-              <div className="col-span-1" data-aos="fade-right" data-aos-mirror="false">
+              <div className="col-span-1" data-aos-mirror="false">
                 <h4 className="text-5xl dark:text-white font-medium mb-6">
                   Relevant Skills
                 </h4>
@@ -50,7 +50,7 @@ export const Resume = () => {
 
               {/* knowledge section start */}
 
-              <div className="col-span-1" data-aos="fade-left" data-aos-mirror="false">
+              <div className="col-span-1" data-aos-mirror="false">
                 <h4 className="text-5xl dark:text-white font-medium mb-8">
                   Knowledges
                 </h4>

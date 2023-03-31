@@ -38,7 +38,7 @@ export function ProjectCard({ title, description, image, pageLink, codeLink, ico
                             ))
                         }
                     </div>
-                    <div className="mt-5 w-full lg:w-auto flex flex-col justify-start items-start lg:flex-row gap-2 lg:gap-4">
+                    <div className="mt-5 w-full lg:w-auto flex flex-row justify-start items-start lg:flex-row gap-2 lg:gap-4">
                         <ProjectButton link={pageLink} Icon={BsArrowRightShort}>View Page</ProjectButton>
                         {
                             codeLink !== "" && <ProjectButton link={codeLink} Icon={BsCodeSlash} iconSize="1rem">View Source</ProjectButton>

@@ -247,6 +247,9 @@ export const data = () => {
         "C# & .NET",
         "MS Power Platform Apps",
         "Data Science",
+        "CI/CD",
+        "Object Oriented Programming",
+        "Functional Programming"
       ]
 
   return {

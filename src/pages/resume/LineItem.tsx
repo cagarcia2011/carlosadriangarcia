@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Line } from 'rc-progress'
 
 import { useData } from '../../hooks/useData'

@@ -5,10 +5,14 @@ export function TechStack() {
 
     const { techStack } = useData()
 
-    const techStackArray = Object.keys(techStack).map(tech => {
+    const techStackArray = Object.keys(techStack)
+        .map(tech => {
 
-        return techStack[tech]
-    })
+            return techStack[tech]
+        })
+        .filter(techItem =>{
+            return techItem.showOnBanner
+        })
 
     return (
         <div className="flex w-full justify-center items-center">
