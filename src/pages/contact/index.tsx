@@ -20,7 +20,7 @@ export const Contact = () => {
                         <Avatar absolute={false} width="200px" />
                     </div>
                 </div>
-                <div className="bg-white lg:rounded-2xl dark:bg-[#111111]" data-aos="fade-up">
+                <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
                     {/* Contact page title */}
                     <h2 className="after-effect after:left-60 after:top-[76px] mt-[12rem] lg:mt-0 mb-12 lg:mb-6 md:mb-[30px] pl-4 md:pl-[60px] pt-12" data-aos="fade-right">
                         Contact

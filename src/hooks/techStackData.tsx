@@ -90,7 +90,7 @@ export function techStackData() {
             Icon: SiMongodb,
             tooltip: "MongoDB",
             animation: null,
-            color: "#4ded64",
+            color: "#3AB84D",
             showOnBanner: true
         },
         postgreSQL: {
