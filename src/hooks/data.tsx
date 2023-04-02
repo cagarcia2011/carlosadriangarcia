@@ -109,63 +109,6 @@ export const data = () => {
         },
       ];
 
-      const skillsArray = [
-        {
-            id: 1,
-            color: "#FF6464",
-            name: "JavaScript",
-            number: "90"
-        },
-        {
-            id: 9,
-            color: "#FF6464",
-            name: "TypeScript",
-            number: "75"
-        },
-        {
-            id: 2,
-            color: "#FF6464",
-            name: "React",
-            number: "80"
-        },
-        {
-            id: 3,
-            color: "#FF6464",
-            name: "Vue",
-            number: "60"
-        },
-        {
-            id: 4,
-            color: "#FF6464",
-            name: "Node.js",
-            number: "70"
-        },
-        {
-            id: 5,
-            color: "#FF6464",
-            name: "HTML & CSS",
-            number: "85"
-        },
-        {
-            id: 6,
-            color: "#FF6464",
-            name: "Python",
-            number: "95"
-        },
-        {
-            id: 7,
-            color: "#FF6464",
-            name: "SQL",
-            number: "80"
-        },
-        {
-            id: 8,
-            color: "#FF6464",
-            name: "UI Design",
-            number: "60"
-        }
-      ]
-
       const educationArray = [
         {
             id: 2,
@@ -237,21 +180,6 @@ export const data = () => {
         },
       ]
 
-      const knowledges = [
-        "Web Design",
-        "Project Management",
-        "Git & GitHub",
-        "Linux",
-        "Agile Devlopment & SCRUM",
-        "Debugging & Troubleshooting",
-        "C# & .NET",
-        "MS Power Platform Apps",
-        "Data Science",
-        "CI/CD",
-        "Object Oriented Programming",
-        "Functional Programming"
-      ]
-
   return {
     local,
     check,
@@ -260,8 +188,6 @@ export const data = () => {
     educationArray,
     experienceArray,
     contactArray,
-    skillsArray,
-    knowledges,
     avatars,
     handleImageChange,
     currentImgSelection,

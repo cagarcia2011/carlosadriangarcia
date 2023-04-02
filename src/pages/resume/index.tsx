@@ -1,5 +1,4 @@
 import { useData } from '../../hooks/useData'
-import { LineItem } from './LineItem'
 import { ResumeCard } from './ResumeCard'
 import { Avatar, Footer, PageTitle } from '../../components'
 import ResumeDoc from '../../assets/resume/Carlos-Garcia-Resume-03-23.pdf'
@@ -7,7 +6,7 @@ import dowloadIcon from '../../assets/icons/download.png'
 import { useEffect } from 'react'
 
 export const Resume = () => {
-  const { skillsArray, knowledges, avatars, handleImageChange } = useData()
+  const { advanceSkills, familiarSkills, tools, avatars, handleImageChange } = useData()
 
   useEffect(() => {
     handleImageChange(false, avatars.greatness)
@@ -38,35 +37,46 @@ export const Resume = () => {
 
           <div className="container bg-transparent dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
             <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
+              {/* Advance Skilla percent element */}
               <div className="col-span-1" data-aos-mirror="false">
                 <h4 className="text-5xl dark:text-white font-medium mb-6">
-                  Relevant Skills
+                  Advance Skills
                 </h4>
-                {/* Experience percent element */}
-                {skillsArray.map((item, i) => (
-                  <LineItem item={item} key={i} />
-                ))}
-              </div>
-
-              {/* knowledge section start */}
-
-              <div className="col-span-1" data-aos-mirror="false">
-                <h4 className="text-5xl dark:text-white font-medium mb-8">
-                  Knowledges
-                </h4>
-
-                {/* Knowledges items */}
-
-                <div className="flex gap-y-5 gap-x-2.5 flex-wrap">
-                  {
-                    knowledges.map((knowledge, index) => (
-                      <button className="resume-btn" key={index}>{knowledge}</button>
-                    ))
-                  }
+                <div className='flex gap-y-5 gap-x-2.5 flex-wrap'>
+                  {advanceSkills.map((skill, idx) => (
+                    <button className='resume-btn' key={idx} >{skill}</button>
+                  ))}
                 </div>
               </div>
-
-              {/* knowledge section end */}
+              
+              <div className='flex flex-col gap-5'>
+                {/* Familiar Skills section start */}
+                <div className="col-span-1" data-aos-mirror="false">
+                  <h4 className="text-5xl dark:text-white font-medium mb-6">
+                    Familiar Skills
+                  </h4>
+                  <div className="flex gap-y-5 gap-x-2.5 flex-wrap">
+                    {
+                      familiarSkills.map((knowledge, index) => (
+                        <button className="resume-btn" key={index}>{knowledge}</button>
+                      ))
+                    }
+                  </div>
+                </div>
+                {/* Tools section start */}
+                <div className="col-span-1" data-aos-mirror="false">
+                  <h4 className="text-5xl dark:text-white font-medium my-6">
+                    Tools
+                  </h4>
+                  <div className="flex gap-y-5 gap-x-2.5 flex-wrap">
+                    {
+                      tools.map((tool, index) => (
+                        <button className="resume-btn" key={index}>{tool}</button>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
             </div>
             <div className='w-full justify-center items-center' data-aos="fade-right" data-aos-mirror="false">
               <a
