@@ -15,6 +15,19 @@ export function projectsData() {
 
     const projectsArray = [
         {
+            id: 3,
+            title: "Netflix Clone",
+            description: "Fullstack Netflix Clone built with Next.js, NextAuth.js, and MongoDB. This project was deployed with Vercel.",
+            pageLink: "https://cg-netflix-clone.vercel.app/",
+            codeLink: "https://github.com/cagarcia2011/cg-netflix-clone",
+            image: CgNetflixClone,
+            icons: [
+                nextjs,
+                typescript,
+                mongoDB
+            ]
+        },
+        {
             id: 1,
             title: "BrokerAuto Webpage",
             description: "BrokerAuto Company Webpage that features a virtual advisor that assists customers that are looking to buy a car. This a project is in Beta. This project was deployed with Netlify.",
@@ -38,19 +51,6 @@ export function projectsData() {
                 react,
                 typescript,
                 tailwind
-            ]
-        },
-        {
-            id: 2,
-            title: "Netflix Clone",
-            description: "Fullstack Netflix Clone built with Next.js, NextAuth.js, and MongoDB. This project was deployed with Vercel.",
-            pageLink: "https://cg-netflix-clone.vercel.app/",
-            codeLink: "https://github.com/cagarcia2011/cg-netflix-clone",
-            image: CgNetflixClone,
-            icons: [
-                nextjs,
-                typescript,
-                mongoDB
             ]
         },
     ]
