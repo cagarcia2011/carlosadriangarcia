@@ -1,4 +1,4 @@
-import { FaMobileAlt, FaEnvelopeOpenText, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaEnvelopeOpenText, FaMapMarkerAlt } from "react-icons/fa";
 
 
 export function PersonalInformation() {
