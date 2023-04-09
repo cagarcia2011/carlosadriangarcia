@@ -20,7 +20,7 @@ export function PersonalInformation() {
                         {" "}
                         <a
                             className="hover:text-accent-color duration-300 transition"
-                            href="mailto:ca.garcia2011@gmail.com"
+                            href={`mailto:${import.meta.env.VITE_EMAIL}`}
                             >
                             {import.meta.env.VITE_EMAIL}
                         </a>
