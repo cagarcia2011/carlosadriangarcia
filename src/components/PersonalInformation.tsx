@@ -7,7 +7,7 @@ export function PersonalInformation() {
         <div className="p-7 rounded-2xl mt-7  bg-[#F3F6F6] dark:bg-[#1D1D1D]">
 
             <div className="flex  border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
-                <a href="mailto:ca.garcia2011@gmail.com" className="cursor-pointer">
+                <a href={`mailto:${import.meta.env.VITE_EMAIL}`} className="cursor-pointer">
                     <span className="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
                         <FaEnvelopeOpenText />
                     </span>
