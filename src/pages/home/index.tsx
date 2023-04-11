@@ -38,7 +38,7 @@ export const Home = () => {
 
       <section className="z-[100] bg-white dark:bg-black min-h-screen bg-no-repeat bg-center bg-cover bg-fixed w-full">
         <div className={`container z-[1000] w-full bg-primary-bg-light dark:bg-primary-bg-dark lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[35px]`}>
-          <div className={`w-full z-[1000] flex justify-between items-center px-4`} data-aos="fade-down">
+          <div className={`w-full z-[1000] flex justify-between items-center px-4`}>
             {/* website logo */}
             <Link to="/">
               <img className="h-[26px] lg:h-[32px] rounded-md hover:scale-[105%] transition-all duration-50 ease-in-out" src={logo} alt="logo" />
@@ -54,7 +54,7 @@ export const Home = () => {
         </div>
         <MobileNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[110px] ">
-          <div className="col-span-12 lg:col-span-4 hidden lg:block h-auto sticky" data-aos="fade-right">
+          <div className="col-span-12 lg:col-span-4 hidden lg:block h-auto sticky">
             <HomeCard />
           </div>
           <div className="col-span-12 lg:col-span-8  ">

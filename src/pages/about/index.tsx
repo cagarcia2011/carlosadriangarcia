@@ -28,19 +28,19 @@ export const About = () => {
       <PageTitle title="About"></PageTitle>
       {/* End pagetitle */}
 
-      <div className=" lg:rounded-2xl bg-white dark:bg-[#111111] overflow-hidden">
+      <div className=" lg:rounded-2xl bg-white dark:bg-[#111111] overflow-hidden mb-[2rem]">
         <div>
           <div className="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14 ">
             {/* About page title */}
-            <h2 data-aos="fade-left" className="after-effect after:left-52 lg:block hidden">
+            <h2 className="after-effect after:left-52 lg:block hidden">
               About Me
             </h2>
             <div className="lg:hidden">
               {/* Sidebar personal information for mobile devices */}
-              <div data-aos="fade-right">
+              <div>
                 <HomeCard />
               </div>
-              <div className=" md:gap-10 mb-12 md:pt-[30px] items-center lg:hidden px-6" data-aos="fade-up">
+              <div className=" md:gap-10 mb-12 md:pt-[30px] items-center lg:hidden px-6">
                 <h2 className="after-effect after:left-52 mb-5">About Me</h2>
                 <div className="col-span-12 space-y-2.5">
                   <div className="lg:mr-16">
@@ -49,7 +49,7 @@ export const About = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden " data-aos="fade-up">
+            <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden ">
               <div className="col-span-12 space-y-2.5">
                 <div className="lg:mr-16">
                   <AboutMeParagraph />

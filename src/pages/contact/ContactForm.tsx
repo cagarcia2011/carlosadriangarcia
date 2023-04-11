@@ -77,7 +77,6 @@ export const ContactForm = ({ condition }: ContactFormProps) => {
   }, [emailSent])
   return (
     <div
-      data-aos="fade"
       className={`${condition
         ? "mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2"
         : "  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px]  p-4  "

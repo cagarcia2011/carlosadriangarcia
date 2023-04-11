@@ -19,7 +19,7 @@ export function PersonalInformation() {
                     <p className="dark:text-white break-all">
                         {" "}
                         <a
-                            className="hover:text-accent-color duration-300 transition"
+                            className="hover:text-accent-color duration-300 transition text-[14px] lg:text-[16px]"
                             href={`mailto:${import.meta.env.VITE_EMAIL}`}
                             >
                             {import.meta.env.VITE_EMAIL}
@@ -36,7 +36,7 @@ export function PersonalInformation() {
                     <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]">
                         Location
                     </p>
-                    <p className="dark:text-white break-all">{import.meta.env.VITE_LOCATION}</p>
+                    <p className="dark:text-white break-all text-[14px] lg:text-[16px]">{import.meta.env.VITE_LOCATION}</p>
                 </div>
             </div>
         </div>
