@@ -52,11 +52,11 @@ export function Projects() {
         <section id="projects" className="bg-white relative lg:rounded-2xl dark:bg-[#111111] h-[58rem] lg:h-auto lg:mb-20 lg:px-[2rem] lg:overflow-hidden sm:overflow-visible">
             <PageTitle title={"Projects"} />
             <div className="relative w-full flex items-center justify-center">
-                <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]" data-aos="fade-right">
+                <div className="lg:hidden absolute z-10 top-[10rem] w-[200px]">
                     <Avatar absolute={false} width="200px" />
                 </div>
             </div>
-            <div data-aos="fade-left" className='hidden lg:block pt-12 md:pt-12 md:px-10 lg:px-14'>
+            <div className='hidden lg:block pt-12 md:pt-12 md:px-10 lg:px-14'>
                 <h2 className='after-effect after:left-44 lg:block hidden'>Projects</h2>
             </div>
             <button onClick={() => slider?.current?.slickNext && slider?.current?.slickNext()} className='group border-none bg-none ring-0 absolute top-[32rem] z-50 lg:top-[24rem] right-2 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-110 active:opacity-50 transition-all duration-200 ease-in-out'>
