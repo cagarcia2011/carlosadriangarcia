@@ -29,7 +29,7 @@ html {
     @apply bg-[#EDF2F2] cursor-default px-5 py-2 rounded-lg  text-gray-lite dark:bg-[#1C1C1C] dark:text-[#A6A6A6];
   }
   .socialbtn {
-    @apply w-10 h-10 rounded-lg text-accent-color hover:bg-gradient-to-r from-accent-color to-variant-bg  flex justify-center items-center  hover:text-white transition-colors duration-300  ease-in-out bg-[#F3F6F6] dark:bg-[#212425];
+    @apply w-10 h-10 rounded-lg text-accent-color flex justify-center items-center bg-[#F3F6F6] dark:bg-[#212425];
   }
 }
 #root {
